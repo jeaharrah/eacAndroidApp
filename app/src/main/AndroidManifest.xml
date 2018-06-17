@@ -37,6 +37,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.jeaha.navigationdrawer.MainActivity" />
         </activity>
+        <activity
+            android:name=".Contact"
+            android:label="@string/title_activity_contact"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.jeaha.navigationdrawer.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

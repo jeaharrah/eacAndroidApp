@@ -11,11 +11,11 @@
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Basic Activity--No Fragment" />
+            android:title="Scrollview Test Page" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_info_outline_24dp"
-            android:title="Basic Activity--Fragment" />
+            android:title="Info" />
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"

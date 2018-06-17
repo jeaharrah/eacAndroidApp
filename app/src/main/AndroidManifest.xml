@@ -28,6 +28,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.jeaha.navigationdrawer.MainActivity" />
         </activity>
+        <activity
+            android:name=".ScrollingActivityTest"
+            android:label="@string/title_activity_scrolling_test"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.jeaha.navigationdrawer.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

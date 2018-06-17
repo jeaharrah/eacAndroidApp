@@ -1,4 +1,18 @@
 <resources>
+
+    <!--Commonly used values-->
+    <string name="about">About</string>
+    <string name="contact">Contact</string>
+    <string name="my_ggrc">My GGRC</string>
+    <string name="my_go_green_card">My GoGreen Rewards Card</string>
+    <string name="go_green_rewards">GoGreen Rewards</string>
+    <string name="calendar">Calendar</string>
+    <string name="events">Events</string>
+    <string name="edu_programs">Educational Programs</string>
+    <string name="photo_gallery">Photo Gallery</string>
+
+
+    <!--Values generated automatically upon activity creation-->
     <string name="app_name">NavigationDrawer</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -99,4 +113,5 @@
     <string name="title_activity_basic">BasicActivity</string>
     <string name="title_activity_basic_no_fragment">BasicActivityNoFragment</string>
     <string name="title_activity_basic_with_nav">BasicWithNav</string>
+    <string name="title_activity_scrolling_test">ScrollingActivityTest</string>
 </resources>

@@ -28,24 +28,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.jeaha.navigationdrawer.MainActivity" />
         </activity>
-        <activity
-            android:name=".BasicActivity"
-            android:label="@string/title_activity_basic"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.jeaha.navigationdrawer.MainActivity" />
-        </activity>
-        <activity
-            android:name=".BasicActivityNoFragment"
-            android:label="@string/title_activity_basic_no_fragment"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.jeaha.navigationdrawer.MainActivity" />
-        </activity>
     </application>
 
 </manifest>

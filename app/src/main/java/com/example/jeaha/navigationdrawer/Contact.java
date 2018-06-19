@@ -6,6 +6,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.TextView;
 
 public class Contact extends AppCompatActivity {
 
@@ -25,6 +26,8 @@ public class Contact extends AppCompatActivity {
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        TextView tv1 = (TextView) findViewById(R.id.txtViewContactEmail);
     }
 
 }

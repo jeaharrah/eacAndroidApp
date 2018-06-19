@@ -11,6 +11,11 @@
     <string name="edu_programs">Educational Programs</string>
     <string name="photo_gallery">Photo Gallery</string>
 
+    <!--Values for contact information-->
+    <string name="email_us_at">Email us at: </string>
+    <string name="email_address">eac.abington@gmail.com</string>
+    <string name="website_address">https://sites.google.com/site/eacabington/</string>
+
 
     <!--Values generated automatically upon activity creation-->
     <string name="app_name">NavigationDrawer</string>

@@ -14,7 +14,13 @@
     <!--Values for contact information-->
     <string name="email_us_at">Email us at: </string>
     <string name="email_address">eac.abington@gmail.com</string>
+    <string name="visit_us">Visit us at:</string>
     <string name="website_address">https://sites.google.com/site/eacabington/</string>
+    <!--<a href="website_link">https://sites.google.com/site/eacabington/</a>-->
+    <string name="website_link"><![CDATA[https://sites.google.com/site/eacabington/]]></string>
+    <!--<string name="email_link"><a href="mailto:eac.abington@gmail.com">eac.abington@gmail.com</a></string>-->
+
+    <string name="email_link"><![CDATA[eac.abington@gmail.com]]></string>
 
 
     <!--Values generated automatically upon activity creation-->

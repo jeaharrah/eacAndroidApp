@@ -5,10 +5,25 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
+import android.util.TypedValue;
 import android.view.View;
+import android.view.ViewTreeObserver;
 import android.widget.TextView;
 
 public class Contact extends AppCompatActivity {
+
+    TextView tv4;
+    ViewTreeObserver.OnGlobalLayoutListener onGlobalLayoutListener = new ViewTreeObserver.OnGlobalLayoutListener() {
+        @Override
+        public void onGlobalLayout() {
+            if (1 < tv4.getLineCount()) {
+                tv4.setTextSize(TypedValue.COMPLEX_UNIT_PX,
+                        tv4.getTextSize() - 2);
+            }
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +42,22 @@ public class Contact extends AppCompatActivity {
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        TextView tv1 = (TextView) findViewById(R.id.txtViewContactEmail);
+        TextView tv1 = (TextView) findViewById(R.id.txtViewContactEmailGreeting);
+        TextView tv2 = (TextView) findViewById(R.id.txtViewContactEmail);
+        TextView tv3 = (TextView) findViewById(R.id.txtViewVisitUs);
+        tv4 = (TextView) findViewById(R.id.txtViewWebpage);
+
+        tv2.setText(Html.fromHtml(getString(R.string.email_link)));
+        tv2.setMovementMethod(LinkMovementMethod.getInstance());
+
+        tv4.setText(Html.fromHtml(getString(R.string.website_link)));
+        tv4.setMovementMethod(LinkMovementMethod.getInstance());
+
+        ViewTreeObserver vto = tv4.getViewTreeObserver();
+        vto.addOnGlobalLayoutListener(onGlobalLayoutListener);
+
     }
+
+
 
 }

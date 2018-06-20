@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity
             intent = new Intent(MainActivity.this, ScrollingActivityTest.class);
             startActivity(intent);
         } else if (id == R.id.nav_slideshow) {
-            intent = new Intent(MainActivity.this, MainActivity.class);
+            intent = new Intent(MainActivity.this, Contact.class);
             startActivity(intent);
 
         } else if (id == R.id.nav_manage) {

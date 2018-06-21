@@ -15,7 +15,7 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
 
-        <item name="android:statusBarColor">@color/colorAccentPink</item>
+        <!--<item name="android:statusBarColor">@color/colorAccentPink</item>-->
         <item name="colorPrimary">@color/darkGreen</item>
         <item name="colorPrimaryDark">@color/mediumGreen</item>
         <item name="colorAccent">@color/blueAccent</item>

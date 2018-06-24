@@ -46,6 +46,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.jeaha.navigationdrawer.MainActivity" />
         </activity>
+        <activity
+            android:name=".PhotoGallery"
+            android:label="@string/title_activity_photo_gallery"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.jeaha.navigationdrawer.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

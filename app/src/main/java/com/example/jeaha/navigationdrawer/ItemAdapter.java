@@ -39,10 +39,11 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
         Item item = itemList.get(position);
         holder.textViewTitle.setText(item.getTitle());
         holder.textViewDesc.setText(item.getShortDesc());
-        holder.textViewRating.setText(String.valueOf(item.getRating()));
-        holder.textViewPrice.setText(String.valueOf(item.getPrice()));
-        holder.imageView.setImageDrawable(mCtxt.getResources().getDrawable(item.getImage(), null));
-
+        holder.textViewLocation.setText(String.valueOf(item.getLocation()));
+        holder.textViewTime.setText(String.valueOf(item.getTime()));
+        holder.textViewMonth.setText(String.valueOf(item.getMonth()));
+        holder.textViewDate.setText(String.valueOf(item.getDate()));
+        
 
     }
 
@@ -53,18 +54,23 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
 
     class ItemViewHolder extends RecyclerView.ViewHolder {
 
-        ImageView imageView;
-        TextView textViewTitle, textViewDesc, textViewRating, textViewPrice;
+        TextView positionGuide;
+        TextView textViewTitle, textViewDesc, textViewLocation, textViewTime, textViewMonth, textViewDate, textViewWeekday;
 
 
         public ItemViewHolder(View itemView) {
             super(itemView);
 
-            imageView = itemView.findViewById(R.id.imageViewGallery);
+            positionGuide = itemView.findViewById(R.id.positionGuide);
             textViewTitle = itemView.findViewById(R.id.textViewTitle);
             textViewDesc = itemView.findViewById(R.id.textViewShortDesc);
-            textViewRating = itemView.findViewById(R.id.textViewLocation);
-            textViewPrice = itemView.findViewById(R.id.textViewTime);
+            textViewLocation = itemView.findViewById(R.id.textViewLocation);
+            textViewTime = itemView.findViewById(R.id.textViewTime);
+            textViewMonth = itemView.findViewById(R.id.textViewMonth);
+            textViewDate = itemView.findViewById(R.id.textViewBigDateNum);
+            textViewWeekday = itemView.findViewById(R.id.textViewWeekday);
+
+
         }
     }
 

@@ -77,7 +77,6 @@ public class PhotoGallery extends AppCompatActivity {
             R.drawable.ic_email_24dp,
             R.drawable.ic_email_24dp
 
-
     };
 
 }

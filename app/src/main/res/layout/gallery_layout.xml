@@ -6,7 +6,7 @@
     android:background="#FFFFFF">
 
     <ImageView
-        android:id="@+id/imageViewGallery"
+        android:id="@+id/positionGuide"
         android:adjustViewBounds="true"
         android:layout_width="match_parent"
         android:layout_height="2000dp" />

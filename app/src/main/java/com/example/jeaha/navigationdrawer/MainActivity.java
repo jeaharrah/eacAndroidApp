@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity
             startActivity(intent);
 
         } else if (id == R.id.nav_programs) {
-            intent = new Intent(MainActivity.this, ScrollingActivityTest.class);
+            intent = new Intent(MainActivity.this, Calendar.class);
             startActivity(intent);
 
         } else if (id == R.id.nav_contact) {

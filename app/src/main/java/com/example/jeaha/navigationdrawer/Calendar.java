@@ -11,10 +11,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ScrollingActivityTest extends AppCompatActivity {
+public class Calendar extends AppCompatActivity {
 
     RecyclerView recyclerView;
     ItemAdapter adapter;
@@ -24,7 +25,7 @@ public class ScrollingActivityTest extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_scrolling_test);
+        setContentView(R.layout.activity_calendar);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -44,32 +45,17 @@ public class ScrollingActivityTest extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         //adding some items to our list
-        itemList.add(
-                new Item(
-                        1,
-                        "Apple MacBook Air Core i5 5th Gen - (8 GB/128 GB SSD/Mac OS Sierra)",
-                        "13.3 inch, Silver, 1.35 kg",
-                        4.3,
-                        60000,
-                        R.drawable.ic_menu_send));
+        itemList.add(new Item("Creek Cleanup", "Community Service", "Pennypack Watershed",
+                "9:00 am", "July", "2", "Monday"));
 
         itemList.add(
-                new Item(
-                        1,
-                        "Dell Inspiron 7000 Core i5 7th Gen - (8 GB/1 TB HDD/Windows 10 Home)",
-                        "14 inch, Gray, 1.659 kg",
-                        4.3,
-                        60000,
-                        R.drawable.ic_menu_share));
+                new Item("Tree Planting Workshop", "Educational Program", "Briarwood Nature " +
+                        "Center",
+                        "10:00 am", "July", "21", "Saturday"));
 
         itemList.add(
-                new Item(
-                        1,
-                        "Microsoft Surface Pro 4 Core m3 6th Gen - (4 GB/128 GB SSD/Windows 10)",
-                        "13.3 inch, Silver, 1.35 kg",
-                        4.3,
-                        60000,
-                        R.drawable.ic_menu_slideshow));
+                new Item("Abington EAC Committee Meeting", "Township Affairs", "Town Hall of " +
+                        "Abington Township", "7:00 pm", "July", "11", "Wednesday"));
 
         //creating RecyclerView adapter
         ItemAdapter adapter = new ItemAdapter(this, itemList);
@@ -82,7 +68,7 @@ public class ScrollingActivityTest extends AppCompatActivity {
 
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_scrolling_activity_test, menu);
+        getMenuInflater().inflate(R.menu.menu_calendar, menu);
         return true;
     }
 
@@ -99,6 +85,17 @@ public class ScrollingActivityTest extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    ArrayList<String> items;
+
+    public void getEventItem() {
+        items = new ArrayList<>();
+
+        for (int i = 1; i <= items.size(); i++) {
+
+        }
+
     }
 
 }

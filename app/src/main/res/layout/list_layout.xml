@@ -7,106 +7,135 @@
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp">
+        android:layout_margin="5dp"
+        android:background="@drawable/calendar_item_gradient">
 
         <RelativeLayout
             android:id="@+id/cardView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="8dp">
+            android:padding="8dp"
+            android:background="@drawable/calendar_item_gradient"
 
-            <ImageView
-                android:id="@+id/imageViewGallery"
+            >
+
+            <TextView
+                android:id="@+id/positionGuide"
                 android:layout_width="120dp"
                 android:layout_height="109dp"
-                android:padding="4dp" />
+                android:padding="4dp"
+
+                />
 
             <TextView
                 android:id="@+id/textViewTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_toRightOf="@id/imageViewGallery"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/textViewMonth"
                 android:text="Apple MacBook Air Core i5 5th Gen - (8 GB/128 GB SSD/Mac OS Sierra)"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
                 android:textColor="#000000"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:textStyle="bold"
+
+                />
 
             <TextView
                 android:id="@+id/textViewShortDesc"
                 android:layout_width="233dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/textViewTitle"
-                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
                 android:layout_marginTop="5dp"
-                android:layout_toRightOf="@id/textViewBigDateNum"
+                android:layout_toEndOf="@id/textViewBigDateNum"
                 android:text="13.3 Inch, 256 GB"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+
+
+                />
 
             <TextView
                 android:id="@+id/textViewLocation"
                 android:layout_width="233dp"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/imageViewGallery"
+                android:layout_alignBottom="@+id/positionGuide"
                 android:layout_alignParentEnd="true"
                 android:layout_below="@id/textViewShortDesc"
-                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
                 android:layout_marginTop="5dp"
-                android:layout_toRightOf="@id/textViewBigDateNum"
+                android:layout_toEndOf="@id/textViewBigDateNum"
                 android:background="@color/colorPrimary"
                 android:text="Millwood Creek"
                 android:textAlignment="textStart"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
                 android:textSize="15sp"
                 android:textStyle="bold"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+
+
+                />
 
             <TextView
                 android:id="@+id/textViewTime"
-                android:layout_width="106dp"
+                android:layout_width="108dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textViewLocation"
                 android:layout_centerHorizontal="true"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_toRightOf="@id/textViewBigDateNum"
+                android:paddingStart="7sp"
                 android:text="8:00 a.m."
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="@color/darkGreen"
 
-            <TextView
-                android:id="@+id/textViewWeekday"
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/imageViewGallery"
-                android:layout_below="@+id/textViewBigDateNum"
-                android:text="Sat"
-                android:textAlignment="center"
-                android:textSize="16sp" />
+                />
 
-            <TextView
-                android:id="@+id/textViewBigDateNum"
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/imageViewGallery"
-                android:layout_below="@+id/textViewMonth"
-                android:gravity="center"
-                android:text="23"
-                android:textAlignment="center"
-                android:textSize="55sp"
-                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textViewMonth"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/imageViewGallery"
-                android:layout_alignTop="@+id/imageViewGallery"
+                android:layout_alignStart="@+id/positionGuide"
+                android:layout_alignTop="@+id/positionGuide"
                 android:text="June"
                 android:textAlignment="center"
-                android:textSize="22sp" />
+                android:textSize="22sp"
+                android:textColor="@color/darkGreen"
+
+                />
+
+
+            <TextView
+                android:id="@+id/textViewBigDateNum"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/positionGuide"
+                android:layout_below="@+id/textViewMonth"
+                android:gravity="center"
+                android:text="23"
+                android:textAlignment="center"
+                android:textSize="55sp"
+                android:textStyle="bold"
+                android:textColor="@color/darkGreen"
+
+                />
+
+
+            <TextView
+                android:id="@+id/textViewWeekday"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/positionGuide"
+                android:layout_below="@+id/textViewBigDateNum"
+                android:text="Sat"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textColor="@color/darkGreen"
+                android:textStyle="bold"
+
+                />
 
         </RelativeLayout>
 

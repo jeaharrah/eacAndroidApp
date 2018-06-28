@@ -11,16 +11,28 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import org.json.JSONObject;
+
 import java.io.File;
+import java.io.FileReader;
+import java.io.InputStream;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Calendar;
 
-public class Calendar extends AppCompatActivity {
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+
+public class CalendarPage extends AppCompatActivity {
 
     RecyclerView recyclerView;
     ItemAdapter adapter;
 
     List<Item> itemList;
+    Calendar calendar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,8 +75,76 @@ public class Calendar extends AppCompatActivity {
         //setting adapter to RecyclerView
         recyclerView.setAdapter(adapter);
 
+        calendar = Calendar.getInstance();
+
+        String in = "";
+        JSONObject reader = null;
+        JSONObject eventA = null;
+
+        String title = "";
+        String shortDescription = "";
+        String location = "";
+        String month = "";
+        String date = "";
+        String weekday = "";
+        String time = "";
+
+        try {
+            reader = new JSONObject(in);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            eventA = reader.getJSONObject("eventA");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            title = eventA.getString("title");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            shortDescription = eventA.getString("shortDescription");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            location = eventA.getString("location");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            month = eventA.getString("month");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            date = eventA.getString("date");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            weekday = eventA.getString("weekday");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            time = eventA.getString("time");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
     }
+
 
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

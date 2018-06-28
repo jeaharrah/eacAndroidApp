@@ -11,7 +11,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,6 +25,12 @@ public class Calendar extends AppCompatActivity {
     ItemAdapter adapter;
 
     List<Item> itemList;
+
+    File file1 = new File("values/events_list.txt");
+
+    File file = new File("/Users/Jennifer/AndroidStudioProjects/navigationdrawer/app/src/main/res/values/events_list.txt");
+    StringBuilder text = new StringBuilder();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +72,20 @@ public class Calendar extends AppCompatActivity {
 
         //setting adapter to RecyclerView
         recyclerView.setAdapter(adapter);
+
+
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(file));
+            String line;
+
+            while ((line = br.readLine()) != null) {
+                text.append(line);
+                text.append('\n');
+            }
+            br.close();
+        } catch (IOException e) {
+            //You'll need to add proper error handling here
+        }
 
 
     }

@@ -121,10 +121,16 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
+
     <string name="title_activity_basic">BasicActivity</string>
     <string name="title_activity_basic_no_fragment">BasicActivityNoFragment</string>
     <string name="title_activity_basic_with_nav">BasicWithNav</string>
     <string name="title_activity_scrolling_test">ScrollingActivityTest</string>
     <string name="title_activity_contact">Contact</string>
     <string name="title_activity_photo_gallery">PhotoGallery</string>
+
+    <string name="about_information">
+        <b>Welcome to the Abington Township Environmental Advisory Council (EAC) and Shade Tree Commission (STC) web site.\n\n</b>
+        The EAC and STC work together to provide a clean and healthy environment for residents in our community through various programs outlined on this web page. Public meetings are usually held the second Tuesday of the month at 7:30 pm at the township building. The meetings are open to the public and we welcome your comments and suggestions.\n\n<b><u>Environmental Advisory Council\n\n</u></b>The EAC was formally created in 1974 and the Council’s charge is found in Chapter 10 of the Code of the Township of Abington. Some of these responsibilities now fall under the preview of a township department rather than the volunteer EAC board. The EAC consists of seven township residents appointed by the Board of Commissioners. Each member serves as a volunteer on the Council for a term of 3 years.\n\n<b>Current EAC members include:\n\n</b>Catherine Gauthier, Chair - aajay@juno.com\nFrank Campbell - campbell@pobox.upenn.edu\nIris Innes - ynys@comcast.net\nMichele Kaczalek - jjkaczalek@aol.com\nAbbie Newman - arngarden5@aol.com\nJennifer Sherwood - jas750@comcast.net\nEd Tierney - edieanded@mac.com\n\n<b><u>Shade Tree Commission\n\n</u></b>The STC was created in 1975 and the Commission’s duties are provided in Chapter 42 of the Code of the Township of Abington.\nAgain, some of these responsibilities fall under the auspices of a township department rather than the volunteer STC board.\nThe STC is comprises three township residents appointed by the Board of Commissioners. Each member serves as a volunteer on the Commission for a term of 5 years.\n\n<b>Current STC members include:\n\n</b>George Mott - geo1089@aol.com\nJeff Pyle - jpyle@giroudtree.com\nMichael Saresky</string>
+
 </resources>

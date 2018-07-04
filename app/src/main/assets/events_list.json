@@ -1,0 +1,52 @@
+/*itemList.add(new Item("Creek Cleanup", "Community Service", "Pennypack Watershed",
+                "9:00 am", "July", "2", "Monday"));
+
+        itemList.add(
+                new Item("Tree Planting Workshop", "Educational Program", "Briarwood Nature " +
+                        "Center", "10:00 am", "July", "21", "Saturday"));
+
+        itemList.add(
+                new Item("Abington EAC Committee Meeting", "Township Affairs", "Town Hall of " +
+                        "Abington Township", "7:00 pm", "July", "11", "Wednesday"));*/
+
+{
+  "events": [
+    {
+    "title": "Watershed Cleanup",
+    "shortDescription": "Community Service",
+    "location": "Pennypack Watershed",
+    "month": "June",
+      "date": "29",
+      "weekday": "Friday",
+    "time": "9:30 a.m."
+    },
+
+    {
+      "title": "Creek Cleanup",
+      "shortDescription": "Community Service",
+      "location": "Pennypack Watershed",
+      "month": "June",
+      "date": "30",
+      "weekday": "Saturday",
+      "time": "11 a.m."
+    },
+    {
+      "title": "Tree Planting Workshop",
+      "shortDescription": "Educational Program",
+      "location": "Briarwood Nature Center",
+      "month": "July",
+      "date": "21",
+      "weekday": "Saturday",
+      "time": "10 a.m."
+    },
+    {
+      "title": "Abington EAC Committee Meeting",
+      "shortDescription": "Township Affairs",
+      "location": "Town Hall",
+      "month": "July",
+      "date": "11",
+      "weekday": "Tuesday",
+      "time": "7:30 p.m."
+    }
+  ]
+}

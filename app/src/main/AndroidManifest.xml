@@ -30,7 +30,7 @@
         </activity>
         <activity
             android:name=".Calendar"
-            android:label="@string/title_activity_scrolling_test"
+            android:label="@string/title_activity_calendar"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data

@@ -125,7 +125,7 @@
     <string name="title_activity_basic">BasicActivity</string>
     <string name="title_activity_basic_no_fragment">BasicActivityNoFragment</string>
     <string name="title_activity_basic_with_nav">BasicWithNav</string>
-    <string name="title_activity_scrolling_test">ScrollingActivityTest</string>
+    <string name="title_activity_calendar">Calendar</string>
     <string name="title_activity_contact">Contact</string>
     <string name="title_activity_photo_gallery">PhotoGallery</string>
 

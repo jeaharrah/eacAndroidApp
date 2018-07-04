@@ -65,6 +65,7 @@
                 android:layout_below="@id/textViewShortDesc"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="5dp"
+                android:paddingBottom="20sp"
                 android:layout_toEndOf="@id/textViewBigDateNum"
                 android:background="@color/colorPrimary"
                 android:text="Millwood Creek"

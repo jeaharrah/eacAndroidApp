@@ -1,21 +1,15 @@
 package com.example.jeaha.navigationdrawer;
 
 import android.os.Bundle;
-import android.provider.Contacts;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.widget.GridView;
-
 import java.util.ArrayList;
 
 public class PhotoGallery extends AppCompatActivity {
 
-    RecyclerView recyclerView;
+    GridView gridView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,26 +19,15 @@ public class PhotoGallery extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        recyclerView = (RecyclerView) findViewById(R.id.galleryView);
-        recyclerView.setHasFixedSize(true);
+        final Integer[] image = new Integer[]{R.drawable.calendar_item_gradient, R.drawable
+                .common_full_open_on_phone, R.drawable.ic_link_24dp, R.drawable
+                .ic_info_outline_24dp, R.drawable.ic_info_black_24dp};
 
-        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getApplicationContext(),
-                3);
-        recyclerView.setLayoutManager(layoutManager);
+        gridView = (GridView) findViewById(R.id.gridView);
 
-        ArrayList<PhotoCell> photoCellArrayList = prepareData();
-        GalleryAdapter galleryAdapter = new GalleryAdapter(getApplicationContext(), photoCellArrayList);
-        recyclerView.setAdapter(galleryAdapter);
+        gridView.setAdapter(new PhotoAdapter(this));
 
     }
 
@@ -78,5 +61,49 @@ public class PhotoGallery extends AppCompatActivity {
             R.drawable.ic_email_24dp
 
     };
+
+    /*public class GridAdapter extends ArrayAdapter {
+        private Integer[] Image;
+        private int resource;
+        private LayoutInflater inflater;
+
+        public GridAdapter(Context context, int resource, Integer[] image) {
+            super(context, resource, image);
+            Image = image;
+            this.resource = resource;
+            inflater = (LayoutInflater)PhotoGallery.this.getSystemService(LAYOUT_INFLATER_SERVICE);
+
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+
+            ViewHolder Holder = null;
+
+            if (convertView == null) {
+                Holder = new ViewHolder();
+                convertView = inflater.inflate(resource, null);
+                Holder.IMAGE = (ImageView) convertView.findViewById(R.id.imageID);
+                convertView.setTag(Holder);
+
+            } else {
+                Holder = (ViewHolder) convertView.getTag();
+            }
+
+            Holder.IMAGE.setImageResource(Image[position]);
+            Holder.IMAGE.setScaleType(ImageView.ScaleType.CENTER_CROP);
+
+            return convertView;
+
+        }
+
+        class ViewHolder {
+            private ImageView IMAGE;
+        }
+
+
+
+    }*/
+
 
 }

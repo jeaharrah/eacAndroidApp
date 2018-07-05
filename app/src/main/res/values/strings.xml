@@ -21,8 +21,7 @@
     <!--<string name="email_link"><a href="mailto:eac.abington@gmail.com">eac.abington@gmail.com</a></string>-->
 
     <string name="email_link"><![CDATA[eac.abington@gmail.com]]></string>
-
-
+    
     <!--Values generated automatically upon activity creation-->
     <string name="app_name">Abington EAC</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>

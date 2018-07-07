@@ -20,7 +20,7 @@
             >
 
             <TextView
-                android:id="@+id/positionGuide"
+                android:id="@+id/photoCell"
                 android:layout_width="120dp"
                 android:layout_height="109dp"
                 android:padding="4dp"
@@ -60,11 +60,12 @@
                 android:id="@+id/textViewLocation"
                 android:layout_width="233dp"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/positionGuide"
+                android:layout_alignBottom="@+id/photoCell"
                 android:layout_alignParentEnd="true"
                 android:layout_below="@id/textViewShortDesc"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="5dp"
+                android:paddingBottom="20sp"
                 android:layout_toEndOf="@id/textViewBigDateNum"
                 android:background="@color/colorPrimary"
                 android:text="Millwood Creek"
@@ -73,7 +74,6 @@
                 android:textSize="15sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/white"
-
 
                 />
 
@@ -97,8 +97,8 @@
                 android:id="@+id/textViewMonth"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/positionGuide"
-                android:layout_alignTop="@+id/positionGuide"
+                android:layout_alignStart="@+id/photoCell"
+                android:layout_alignTop="@+id/photoCell"
                 android:text="June"
                 android:textAlignment="center"
                 android:textSize="22sp"
@@ -111,7 +111,7 @@
                 android:id="@+id/textViewBigDateNum"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/positionGuide"
+                android:layout_alignStart="@+id/photoCell"
                 android:layout_below="@+id/textViewMonth"
                 android:gravity="center"
                 android:text="23"
@@ -127,7 +127,7 @@
                 android:id="@+id/textViewWeekday"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/positionGuide"
+                android:layout_alignStart="@+id/photoCell"
                 android:layout_below="@+id/textViewBigDateNum"
                 android:text="Sat"
                 android:textAlignment="center"

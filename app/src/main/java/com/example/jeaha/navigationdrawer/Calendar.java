@@ -1,5 +1,6 @@
 package com.example.jeaha.navigationdrawer;
 
+import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -11,13 +12,17 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.IOException;
-import java.net.URL;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class Calendar extends AppCompatActivity {
 
@@ -26,20 +31,22 @@ public class Calendar extends AppCompatActivity {
 
     List<Item> itemList;
 
-    File file1 = new File("values/events_list.txt");
-
-    File file = new File("/Users/Jennifer/AndroidStudioProjects/navigationdrawer/app/src/main/res/values/events_list.txt");
-    StringBuilder text = new StringBuilder();
-
+    String title = "";
+    String shortDescription = "";
+    String location = "";
+    String month = "";
+    String date = "";
+    String weekday = "";
+    String time = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendar);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -47,46 +54,29 @@ public class Calendar extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         itemList = new ArrayList<>();
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        //adding some items to our list
-        itemList.add(new Item("Creek Cleanup", "Community Service", "Pennypack Watershed",
-                "9:00 am", "July", "2", "Monday"));
+        try {
+            try {
+                itemList = getEventItem("events");
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
+        } catch (JSONException e1) {
+            e1.printStackTrace();
+        }
 
-        itemList.add(
-                new Item("Tree Planting Workshop", "Educational Program", "Briarwood Nature " +
-                        "Center",
-                        "10:00 am", "July", "21", "Saturday"));
-
-        itemList.add(
-                new Item("Abington EAC Committee Meeting", "Township Affairs", "Town Hall of " +
-                        "Abington Township", "7:00 pm", "July", "11", "Wednesday"));
-
-        //creating RecyclerView adapter
-        ItemAdapter adapter = new ItemAdapter(this, itemList);
+        //Creating RecyclerView adapter
+        adapter = new ItemAdapter(this, itemList);
 
         //setting adapter to RecyclerView
         recyclerView.setAdapter(adapter);
-
-
-        try {
-            BufferedReader br = new BufferedReader(new FileReader(file));
-            String line;
-
-            while ((line = br.readLine()) != null) {
-                text.append(line);
-                text.append('\n');
-            }
-            br.close();
-        } catch (IOException e) {
-            //You'll need to add proper error handling here
-        }
-
 
     }
 
@@ -111,15 +101,49 @@ public class Calendar extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    ArrayList<String> items;
+    public List<Item> getEventItem(String in) throws JSONException, IOException {
+        InputStream inputStream;
+        AssetManager assetManager = getAssets();
+        inputStream = assetManager.open("events_list.json");
 
-    public void getEventItem() {
-        items = new ArrayList<>();
+        String jsonString = getStringFromInputStream(inputStream, "UTF-8");
+        JSONObject json = new JSONObject(jsonString);
+        JSONArray jArray = json.getJSONArray(in);
+        JSONObject e;
 
-        for (int i = 1; i <= items.size(); i++) {
+        System.out.println("JSON Array Length: " + jArray.length());
+
+        for (int i = 0; i < jArray.length(); i++) {
+            e = jArray.getJSONObject(i);
+
+            title = e.getString("title");
+            shortDescription = e.getString("shortDescription");
+            location = e.getString("location");
+            time = e.getString("time");
+            month = e.getString("month");
+            date = e.getString("date");
+            weekday = e.getString("weekday");
+
+            Item item = new Item(title, shortDescription, location, time, month, date, weekday);
+            itemList.add(item);
 
         }
 
+        return itemList;
+
+    }
+
+    public static String getStringFromInputStream(InputStream stream, String charsetName) throws IOException {
+        int n = 0;
+        char[] buffer = new char[1024 * 4];
+
+        InputStreamReader reader = new InputStreamReader(stream, charsetName);
+        StringWriter writer = new StringWriter();
+
+        while (-1 != (n = reader.read(buffer)))
+            writer.write(buffer, 0, n);
+
+        return writer.toString();
     }
 
 }

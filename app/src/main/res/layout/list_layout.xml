@@ -14,18 +14,14 @@
             android:id="@+id/cardView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="8dp"
             android:background="@drawable/calendar_item_gradient"
-
-            >
+            android:padding="8dp">
 
             <TextView
                 android:id="@+id/photoCell"
                 android:layout_width="120dp"
                 android:layout_height="109dp"
-                android:padding="4dp"
-
-                />
+                android:padding="4dp" />
 
             <TextView
                 android:id="@+id/textViewTitle"
@@ -37,9 +33,7 @@
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
                 android:textColor="#000000"
                 android:textSize="15sp"
-                android:textStyle="bold"
-
-                />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textViewShortDesc"
@@ -51,10 +45,7 @@
                 android:layout_toEndOf="@id/textViewBigDateNum"
                 android:text="13.3 Inch, 256 GB"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-                android:textSize="15sp"
-
-
-                />
+                android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/textViewLocation"
@@ -65,17 +56,15 @@
                 android:layout_below="@id/textViewShortDesc"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="5dp"
-                android:paddingBottom="20sp"
                 android:layout_toEndOf="@id/textViewBigDateNum"
                 android:background="@color/colorPrimary"
+                android:paddingBottom="20sp"
                 android:text="Millwood Creek"
                 android:textAlignment="textStart"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 android:textColor="@android:color/white"
-
-                />
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textViewTime"
@@ -86,11 +75,9 @@
                 android:paddingStart="7sp"
                 android:text="8:00 a.m."
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-                android:textSize="18sp"
-                android:textStyle="bold"
                 android:textColor="@color/darkGreen"
-
-                />
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
 
             <TextView
@@ -101,10 +88,8 @@
                 android:layout_alignTop="@+id/photoCell"
                 android:text="June"
                 android:textAlignment="center"
-                android:textSize="22sp"
                 android:textColor="@color/darkGreen"
-
-                />
+                android:textSize="22sp" />
 
 
             <TextView
@@ -116,11 +101,9 @@
                 android:gravity="center"
                 android:text="23"
                 android:textAlignment="center"
-                android:textSize="55sp"
-                android:textStyle="bold"
                 android:textColor="@color/darkGreen"
-
-                />
+                android:textSize="55sp"
+                android:textStyle="bold" />
 
 
             <TextView
@@ -131,11 +114,9 @@
                 android:layout_below="@+id/textViewBigDateNum"
                 android:text="Sat"
                 android:textAlignment="center"
-                android:textSize="16sp"
                 android:textColor="@color/darkGreen"
-                android:textStyle="bold"
-
-                />
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
         </RelativeLayout>
 

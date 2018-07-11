@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
+import android.widget.TextView;
 
 public class About extends AppCompatActivity {
 
@@ -29,6 +30,9 @@ public class About extends AppCompatActivity {
         });
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        TextView textView = findViewById(R.id.about_textview);
+        textView.setText(R.string.about_information);
 
     }
 

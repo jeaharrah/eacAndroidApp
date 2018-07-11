@@ -2,7 +2,7 @@
 
 <!--<TextView--><!--android:id="@+id/txtViewContactEmail"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_marginEnd="144dp"--><!--android:layout_marginTop="36dp"--><!--android:gravity="center"--><!--android:text="@string/email_us_at"--><!--android:textAlignment="center"--><!--app:layout_constraintEnd_toEndOf="parent"--><!--app:layout_constraintTop_toTopOf="parent" />--><!--</android.support.constraint.ConstraintLayout>-->
 
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,7 +11,7 @@
     tools:context=".Contact"
     tools:showIn="@layout/activity_contact">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -20,35 +20,38 @@
             android:id="@+id/txtViewContactEmailGreeting"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
             android:layout_gravity="start"
-            android:layout_marginTop="36dp"
-            android:paddingStart="15dp"
-            android:paddingEnd="15sp"
-            android:drawableStart="@drawable/ic_email_24dp"
             android:drawablePadding="15sp"
+            android:drawableStart="@drawable/ic_email_24dp"
             android:gravity="center"
+            android:paddingEnd="15sp"
+            android:paddingStart="15dp"
             android:text="@string/email_us_at"
             android:textAlignment="center"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
 
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
             android:textSize="26sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
 
         <TextView
-            android:autoLink="email"
             android:id="@+id/txtViewContactEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/txtViewContactEmailGreeting"
             android:layout_gravity="start"
-            android:paddingStart="15sp"
-            android:paddingEnd="15sp"
-            android:gravity=""
-            android:text="@string/email_link"
-            android:textSize="22sp"
+            android:autoLink="email"
             android:fontFamily="serif"
+            android:gravity=""
+            android:paddingEnd="15sp"
+            android:paddingStart="15sp"
+            android:text="@string/email_link"
             android:textColorLink="@android:color/black"
+            android:textSize="22sp"
 
             />
 
@@ -56,36 +59,166 @@
             android:id="@+id/txtViewVisitUs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
-            android:paddingStart="15sp"
-            android:paddingEnd="15sp"
+            android:layout_below="@+id/txtViewContactEmail"
+            android:layout_gravity="start"
+            android:layout_marginTop="15sp"
+            android:drawablePadding="15sp"
+            android:drawableStart="@drawable/ic_link_24dp"
             android:gravity="center_vertical"
+            android:paddingEnd="15sp"
+            android:paddingStart="15sp"
             android:text="@string/visit_us"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
             android:textSize="26sp"
             android:textStyle="bold"
-            android:layout_gravity="start"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:drawableStart="@drawable/ic_link_24dp"
-            android:drawablePadding="15sp" />
+
+            />
 
         <TextView
-            android:autoLink="web"
             android:id="@+id/txtViewWebpage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/txtViewVisitUs"
             android:layout_gravity="start"
+            android:autoLink="web"
+            android:elegantTextHeight="true"
             android:fontFamily="serif"
             android:gravity=""
+            android:paddingBottom="5sp"
+            android:paddingEnd="15sp"
+            android:paddingStart="15sp"
             android:text="@string/website_link"
             android:textColorLink="@android:color/black"
             android:textSize="18sp"
-            android:paddingStart="15sp"
+
+            />
+
+        <TextView
+            android:id="@+id/txtViewStcContactHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtViewWebpage"
+            android:layout_gravity="start"
+            android:layout_marginTop="15sp"
+            android:gravity="center"
             android:paddingEnd="15sp"
+            android:paddingStart="15dp"
+            android:text="@string/shade_tree_commission"
+            android:textAlignment="center"
+
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textSize="26sp"
+
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+        <TextView
+            android:id="@+id/txtViewStcAbout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtViewStcContactHeader"
+            android:layout_gravity="start"
+            android:layout_marginTop="15sp"
+            android:drawablePadding="15sp"
+            android:drawableStart="@drawable/ic_info_black_24dp"
+            android:gravity="center"
+            android:paddingEnd="15sp"
+            android:paddingStart="15dp"
+            android:text="@string/stc_about_header"
+            android:textAlignment="center"
+
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/txtViewStcContactHeader"
+            app:layout_constraintTop_toTopOf="@id/txtViewStcContactHeader"
+
+            />
+
+        <TextView
+            android:id="@+id/txtViewStcContactEmailGreeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtViewStcAbout"
+            android:layout_gravity="start"
+            android:layout_marginTop="15sp"
+            android:drawablePadding="15sp"
+            android:drawableStart="@drawable/ic_email_24dp"
+            android:gravity="center"
+            android:paddingEnd="15sp"
+            android:paddingStart="15dp"
+            android:text="@string/email_us_at"
+            android:textAlignment="center"
+
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+        <TextView
+            android:id="@+id/txtViewStcContactEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtViewStcContactEmailGreeting"
+            android:layout_gravity="start"
+            android:autoLink="email"
+            android:fontFamily="serif"
+            android:paddingEnd="15sp"
+            android:paddingStart="15sp"
+            android:text="@string/stc_email_link"
+            android:textColorLink="@android:color/black"
+            android:textSize="22sp"
+
+            />
+
+        <TextView
+            android:id="@+id/txtViewStcVisitUs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtViewStcContactEmail"
+            android:layout_gravity="start"
+            android:layout_marginTop="15sp"
+            android:drawablePadding="15sp"
+            android:drawableStart="@drawable/ic_link_24dp"
+            android:drawableTintMode="src_atop"
+            android:gravity="center_vertical"
+            android:paddingEnd="15sp"
+            android:paddingStart="15sp"
+            android:text="@string/visit_us"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+        <TextView
+            android:id="@+id/txtViewStcWebpage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtViewStcVisitUs"
+            android:layout_gravity="start"
+            android:autoLink="web"
+            android:elegantTextHeight="true"
+            android:fontFamily="serif"
             android:paddingBottom="5sp"
-            android:elegantTextHeight="true" />
+            android:paddingEnd="15sp"
+            android:paddingStart="15sp"
+            android:text="@string/stc_website_link"
+            android:textColorLink="@android:color/black"
+            android:textSize="18sp"
 
-    </LinearLayout>
+            />
 
-</android.support.design.widget.CoordinatorLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -28,6 +28,15 @@ public class About extends AppCompatActivity {
             }
         });
 
+        FloatingActionButton fab2 = (FloatingActionButton) findViewById(R.id.fabDecrease);
+        fab2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         TextView textView = findViewById(R.id.about_textview);

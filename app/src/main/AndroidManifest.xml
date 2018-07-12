@@ -6,11 +6,11 @@
 
     <application
         android:allowBackup="true"
+        android:description="@string/about_information"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:description="@string/about_information"
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
@@ -52,6 +52,15 @@
         <activity
             android:name=".PhotoGallery"
             android:label="@string/title_activity_photo_gallery"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.jeaha.navigationdrawer.MainActivity" />
+        </activity>
+        <activity
+            android:name=".TabbedAbout"
+            android:label="@string/about_abington"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data

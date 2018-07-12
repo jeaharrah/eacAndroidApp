@@ -13,14 +13,35 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtViewEacContactHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:gravity="start"
+            android:paddingEnd="15sp"
+            android:paddingStart="15sp"
+            android:paddingTop="10sp"
+            android:paddingBottom="10sp"
+            android:text="@string/app_name"
+
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textSize="26sp"
+
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_alignParentTop="true"
+
+            />
 
         <TextView
             android:id="@+id/txtViewContactEmailGreeting"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
             android:layout_gravity="start"
             android:drawablePadding="15sp"
             android:drawableStart="@drawable/ic_email_24dp"
@@ -33,6 +54,8 @@
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
             android:textSize="26sp"
             android:textStyle="bold"
+
+            android:layout_below="@id/txtViewEacContactHeader"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
 
@@ -46,13 +69,13 @@
             android:layout_gravity="start"
             android:autoLink="email"
             android:fontFamily="serif"
-            android:gravity=""
             android:paddingEnd="15sp"
             android:paddingStart="15sp"
             android:text="@string/email_link"
             android:textColorLink="@android:color/black"
             android:textSize="22sp"
-
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             />
 
         <TextView
@@ -85,14 +108,14 @@
             android:autoLink="web"
             android:elegantTextHeight="true"
             android:fontFamily="serif"
-            android:gravity=""
             android:paddingBottom="5sp"
             android:paddingEnd="15sp"
             android:paddingStart="15sp"
             android:text="@string/website_link"
             android:textColorLink="@android:color/black"
             android:textSize="18sp"
-
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             />
 
         <TextView
@@ -102,19 +125,15 @@
             android:layout_below="@+id/txtViewWebpage"
             android:layout_gravity="start"
             android:layout_marginTop="15sp"
-            android:gravity="center"
+            android:gravity="start"
             android:paddingEnd="15sp"
             android:paddingStart="15dp"
             android:text="@string/shade_tree_commission"
-            android:textAlignment="center"
-
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
             android:textSize="26sp"
-
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-
             />
 
         <TextView
@@ -135,8 +154,8 @@
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
             android:textSize="26sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@id/txtViewStcContactHeader"
-            app:layout_constraintTop_toTopOf="@id/txtViewStcContactHeader"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
 
             />
 
@@ -176,7 +195,8 @@
             android:text="@string/stc_email_link"
             android:textColorLink="@android:color/black"
             android:textSize="22sp"
-
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             />
 
         <TextView
@@ -216,7 +236,8 @@
             android:text="@string/stc_website_link"
             android:textColorLink="@android:color/black"
             android:textSize="18sp"
-
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             />
 
     </RelativeLayout>

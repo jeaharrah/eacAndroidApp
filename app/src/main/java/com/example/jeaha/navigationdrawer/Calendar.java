@@ -1,5 +1,6 @@
 package com.example.jeaha.navigationdrawer;
 
+import android.content.Intent;
 import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -26,6 +27,8 @@ import java.util.List;
 
 public class Calendar extends AppCompatActivity {
 
+    Intent intent;
+
     RecyclerView recyclerView;
     ItemAdapter adapter;
 
@@ -50,8 +53,8 @@ public class Calendar extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                intent = new Intent(Calendar.this, Contact.class);
+                startActivity(intent);
             }
         });
 

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "603018144921",
+    "firebase_url": "https://abingtoneacandroid.firebaseio.com",
+    "project_id": "abingtoneacandroid",
+    "storage_bucket": "abingtoneacandroid.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:603018144921:android:7d55e382557c5104",
+        "android_client_info": {
+          "package_name": "com.example.jeaha.navigationdrawer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "603018144921-f0v4gt76ql7fdia66kib06s3r3i42irq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.jeaha.navigationdrawer",
+            "certificate_hash": "9a16f23630b33128ee6bd425f6ec0859c4d60b4f"
+          }
+        },
+        {
+          "client_id": "603018144921-g3l8n0qcrl6vt1ev15pf7eekncludcpe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANH0Wbj6MkMoHVDEVD6evaoF5YawoUedU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "603018144921-g3l8n0qcrl6vt1ev15pf7eekncludcpe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

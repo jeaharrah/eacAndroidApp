@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "abingtoneacandroid",
+  "private_key_id": "61de9f86ee9626796591c9f0f4a9056ba8fb60a7",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC7GoZ6NJXa3LKy\nYzy+BPSF9ng2Iqbr/863bO7XGhThxBfj9MwwUMeTVXhtLdQ6A4ofuWWAKZPPkumm\nBgssVGulr9b9w+RLFppcB7ejktT37kPOEAoDO5NFIAwkMWbqcUIY88WRTlboEypw\nLRcUchwriPTh81apf5OZCjUJpFYRIkNmV4GA58bMgEWLHhQLHrl1gFibpR6my8Y2\nzIT5Pb2FmbhXJyIT/nmnmnZpIPLDKdDmhhjYtuB2n9q+T1cUwa4Jccy2r6yUu32s\n0V18SzoyBwAXM97Wsh8cCGxkjQKlE8LCQ321MRE982nPR6mf/i+yeoYHwooM7uXa\nlrgLkd3NAgMBAAECggEAAPyDT/qd/aDjOkiGpfPNvDUP7i0hlyXql5H18mFbUdNg\nUt3UA78xRigRsfWnZETnggJOtC3D7zi1jaADiBDL3nw+VGknd3PfjXOm9rBL+iCh\n7+CqxNiYDqm8FqbCBaNiN1J1rK3ujFupghzivcNaPaqDq/tF7i/Tfd+NZwccQwva\nYy4P5wPgdjdLxvXEr4sfdNMn8gnUQbw00Y4BFhvIINVGQDJXwtaafL2V+SxVwV1b\nvJUULxCZjWz0p3/mXA1KKs0nIQOpLmMYv6Bt6vNMo04mjNON0CPGxRLZR0DjTECF\ntq0pH0jcgCUI8k7pxusfDeuEQhsx2nOMWZz6NbzICwKBgQDgbXMH31mIBKZxtM6E\nXoQCCaJRtoyV7T8OJx2kWY3fgqEBBM6dT9te/olQMKI18O6SrI1IjQQWwLt0k8fc\nqF+Mge3uMkvLrPbQ8moJBf7YZyCEs8jrbCZhkqFSC9HzaFVeXK5FOLvDle/Jez9X\nr0Him5FtV0sIs9mtojADq8F9swKBgQDVbOOsVEoYLqcTvXSAQO/tLeoNa2AwIg08\nINs6787P2S4AspnBBRIxAS+9jdjRDK7ByjlzMwlkjSI1qqyhW/jAxGgij6kDUwA4\nmmkmPdMroBTmGltJmAxc9AMvBIJWosIfVzo7fZTz/wzSFqMd0+nj1+Bxg02r2DrI\n9RollMx2fwKBgQDNTjLKA9+Sl7ZwFJhL7W7Tsl6EY/wN94AUgWIThD1ON+Dz3qLo\ntDIZn76b1jG+KM8G7MU+lookCmIyDjLqwDjQf9fabLZ795m+odSwtoRhEU5lN1bZ\nTxF5dzsOpHOHOW3HKf/eoTzbeqFmbtIOc+xQ0kHihdXFe0nqFpHX+drDEwKBgD/Z\nIYtuc/QkEMuxA+dShfR4pep50v7TUQ5J7gwFreM0X7TJuYGrGLQcXMHia5iuqKFE\n9EboX8j7B97yPk7Piu1wVI7yV2etLwW/+/D60e/dJiNogyLTH++2+DTarntomZZy\nq/McMLGF/bnkF8xWl0QYUwbidxwPxhZUbQwNJdXVAoGBAJgFqBBtD8DuSDsxblbG\nspL/b5lDl5dL5hxfO9vOwyhs3IBu6M1d5U9F8V+6t2fXvY6zLTTxfiN0x+K554BL\nyhy0/kcPtzw8y3q4x65oABG67gfP+z1ajobHbY1ZZTt1uI+DDRz9baldSeIXoHL3\nJRJwxsuQB00FOsr6BFHuiJ03\n-----END PRIVATE KEY-----\n",
+  "client_email": "abingtoneac@abingtoneacandroid.iam.gserviceaccount.com",
+  "client_id": "106863687456782440789",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/abingtoneac%40abingtoneacandroid.iam.gserviceaccount.com"
+}

@@ -1,5 +1,6 @@
 package com.example.jeaha.navigationdrawer;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -17,6 +18,8 @@ import android.widget.TextView;
 public class Contact extends AppCompatActivity {
 
     TextView tv4;
+    Intent intent;
+
     ViewTreeObserver.OnGlobalLayoutListener onGlobalLayoutListener = new ViewTreeObserver.OnGlobalLayoutListener() {
         @Override
         public void onGlobalLayout() {
@@ -34,15 +37,6 @@ public class Contact extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         TextView tv1 = (TextView) findViewById(R.id.txtViewContactEmailGreeting);
@@ -58,6 +52,29 @@ public class Contact extends AppCompatActivity {
 
         ViewTreeObserver vto = tv4.getViewTreeObserver();
         vto.addOnGlobalLayoutListener(onGlobalLayoutListener);
+
+        TextView tv5 = (TextView) findViewById(R.id.txtViewStcContactHeader);
+        TextView tv6 = (TextView) findViewById(R.id.txtViewStcAbout);
+        TextView tv7 = (TextView) findViewById(R.id.txtViewStcContactEmailGreeting);
+        TextView tv8 = (TextView) findViewById(R.id.txtViewStcContactEmail);
+        TextView tv9 = (TextView) findViewById(R.id.txtViewStcVisitUs);
+        TextView tv10 = (TextView) findViewById(R.id.txtViewStcWebpage);
+
+        tv6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intent = new Intent(Contact.this, About.class);
+                startActivity(intent);
+            }
+
+        });
+
+        tv8.setText(Html.fromHtml(getString(R.string.stc_email_link)));
+        tv8.setMovementMethod(LinkMovementMethod.getInstance());
+
+        tv10.setText(Html.fromHtml(getString(R.string.stc_website_link)));
+        tv10.setMovementMethod(LinkMovementMethod.getInstance());
+
 
     }
 

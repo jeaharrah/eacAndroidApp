@@ -40,7 +40,7 @@ public class About extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         TextView textView = findViewById(R.id.about_textview);
-        textView.setText(R.string.about_information);
+        textView.setText(R.string.about_eac_information);
 
 
     }

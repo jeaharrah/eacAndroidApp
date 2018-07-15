@@ -18,17 +18,34 @@ import android.widget.TextView;
 public class Contact extends AppCompatActivity {
 
     TextView tv4;
+    TextView tv5;
     Intent intent;
 
-    ViewTreeObserver.OnGlobalLayoutListener onGlobalLayoutListener = new ViewTreeObserver.OnGlobalLayoutListener() {
-        @Override
-        public void onGlobalLayout() {
-            if (1 < tv4.getLineCount()) {
-                tv4.setTextSize(TypedValue.COMPLEX_UNIT_PX,
-                        tv4.getTextSize() - 2);
-            }
-        }
-    };
+    ViewTreeObserver.OnGlobalLayoutListener onGlobalLayoutListener =
+            new ViewTreeObserver.OnGlobalLayoutListener() {
+
+                public void onGlobalLayout() {
+                    if (1 < tv4.getLineCount()) {
+                        tv4.setTextSize(TypedValue.COMPLEX_UNIT_PX,
+                                tv4.getTextSize() - 2);
+                    }
+
+                }
+            };
+
+    ViewTreeObserver.OnGlobalLayoutListener onGlobalLayoutListener2 =
+            new ViewTreeObserver.OnGlobalLayoutListener() {
+
+                public void onGlobalLayout() {
+                    if (1 < tv5.getLineCount()) {
+                        tv5.setTextSize(TypedValue.COMPLEX_UNIT_PX, tv5.getTextSize() - 2);
+
+                    }
+                }
+
+                ;
+
+            };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,17 +67,30 @@ public class Contact extends AppCompatActivity {
         tv4.setText(Html.fromHtml(getString(R.string.website_link)));
         tv4.setMovementMethod(LinkMovementMethod.getInstance());
 
-        ViewTreeObserver vto = tv4.getViewTreeObserver();
-        vto.addOnGlobalLayoutListener(onGlobalLayoutListener);
-
-        TextView tv5 = (TextView) findViewById(R.id.txtViewStcContactHeader);
+        tv5 = (TextView) findViewById(R.id.txtViewStcContactHeader);
         TextView tv6 = (TextView) findViewById(R.id.txtViewStcAbout);
         TextView tv7 = (TextView) findViewById(R.id.txtViewStcContactEmailGreeting);
         TextView tv8 = (TextView) findViewById(R.id.txtViewStcContactEmail);
         TextView tv9 = (TextView) findViewById(R.id.txtViewStcVisitUs);
         TextView tv10 = (TextView) findViewById(R.id.txtViewStcWebpage);
+        TextView tv11 = (TextView) findViewById(R.id.txtViewEacAbout);
+
+        ViewTreeObserver vto = tv4.getViewTreeObserver();
+        vto.addOnGlobalLayoutListener(onGlobalLayoutListener);
+
+        ViewTreeObserver vto2 = tv5.getViewTreeObserver();
+        vto2.addOnGlobalLayoutListener(onGlobalLayoutListener2);
 
         tv6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intent = new Intent(Contact.this, About.class);
+                startActivity(intent);
+            }
+
+        });
+
+        tv11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 intent = new Intent(Contact.this, About.class);

@@ -60,7 +60,7 @@
         </activity>
         <activity
             android:name=".TabbedAbout"
-            android:label="@string/about_abington"
+            android:label="@string/about_abington_committees"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data

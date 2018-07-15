@@ -2,7 +2,7 @@
 
     <!--Commonly used values-->
     <string name="about">About</string>
-    <string name="about_abington">About Abington\'s EAC &amp; STC</string>
+    <string name="about_abington_committees">About Abington\'s EAC &amp; STC</string>
     <string name="contact">Contact</string>
     <string name="my_ggrc">My GGRC</string>
     <string name="my_go_green_card">My GoGreen Rewards Card</string>
@@ -31,6 +31,8 @@
 
     <!--Values generated automatically upon activity creation-->
     <string name="app_name">Abington EAC</string>
+    <string name="app_name_underlined"><b><u>Abington EAC</u></b></string>
+
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Abington Township Environmental Advisory Council</string>
@@ -40,6 +42,7 @@
 
     <!--Auto-generated activity titles-->
     <string name="title_activity_about">About the EAC</string>
+    <string name="about_the_eac">About the EAC</string>
     <string name="title_activity_calendar">Calendar</string>
     <string name="title_activity_contact">Contact</string>
     <string name="title_activity_photo_gallery">Photo Gallery</string>

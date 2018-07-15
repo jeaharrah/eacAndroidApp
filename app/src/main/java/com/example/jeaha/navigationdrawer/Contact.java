@@ -29,24 +29,12 @@ public class Contact extends AppCompatActivity {
                     if (1 < tv4.getLineCount()) {
                         tv4.setTextSize(TypedValue.COMPLEX_UNIT_PX,
                                 tv4.getTextSize() - 2);
+                    } else if (1 < tv5.getLineCount()) {
+                        tv5.setTextSize(TypedValue.COMPLEX_UNIT_PX,
+                                tv5.getTextSize() - 2);
                     }
 
                 }
-            };
-
-    ViewTreeObserver.OnGlobalLayoutListener onGlobalLayoutListener2 =
-            new ViewTreeObserver.OnGlobalLayoutListener() {
-
-                @Override
-                public void onGlobalLayout() {
-                    if (1 < tv5.getLineCount()) {
-                        tv5.setTextSize(TypedValue.COMPLEX_UNIT_PX, tv5.getTextSize() - 2);
-
-                    }
-                }
-
-                ;
-
             };
 
     @Override
@@ -80,8 +68,8 @@ public class Contact extends AppCompatActivity {
         ViewTreeObserver vto = tv4.getViewTreeObserver();
         vto.addOnGlobalLayoutListener(onGlobalLayoutListener);
 
-        ViewTreeObserver vto2 = tv5.getViewTreeObserver();
-        vto2.addOnGlobalLayoutListener(onGlobalLayoutListener2);
+        vto = tv5.getViewTreeObserver();
+        vto.addOnGlobalLayoutListener(onGlobalLayoutListener);
 
         tv6.setOnClickListener(new View.OnClickListener() {
             @Override

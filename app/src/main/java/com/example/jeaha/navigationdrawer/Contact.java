@@ -24,6 +24,7 @@ public class Contact extends AppCompatActivity {
     ViewTreeObserver.OnGlobalLayoutListener onGlobalLayoutListener =
             new ViewTreeObserver.OnGlobalLayoutListener() {
 
+                @Override
                 public void onGlobalLayout() {
                     if (1 < tv4.getLineCount()) {
                         tv4.setTextSize(TypedValue.COMPLEX_UNIT_PX,
@@ -36,6 +37,7 @@ public class Contact extends AppCompatActivity {
     ViewTreeObserver.OnGlobalLayoutListener onGlobalLayoutListener2 =
             new ViewTreeObserver.OnGlobalLayoutListener() {
 
+                @Override
                 public void onGlobalLayout() {
                     if (1 < tv5.getLineCount()) {
                         tv5.setTextSize(TypedValue.COMPLEX_UNIT_PX, tv5.getTextSize() - 2);

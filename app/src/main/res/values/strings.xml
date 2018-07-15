@@ -47,6 +47,9 @@
     <string name="title_activity_contact">Contact</string>
     <string name="title_activity_photo_gallery">Photo Gallery</string>
 
+    <!--ImageView Content Descriptor Values-->
+    <string name="eac_logo_descriptor">Abington EAC Logo</string>
+
     <string name="welcome_message">
         <b>"Welcome to the Abington Township Environmental Advisory Council (EAC) and Shade Tree"
             "Commission (STC) mobile app!\n\n"</b>

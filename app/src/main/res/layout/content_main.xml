@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,25 +12,31 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/imageView"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="124dp"
-            android:layout_alignParentTop="true"
-            android:scaleType="centerCrop"
-            app:srcCompat="@drawable/eac_logo_full" />
+            android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="275sp"
-            android:layout_height="match_parent"
-            android:layout_below="@id/imageView"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:gravity="center"
-            android:text="@string/welcome_message"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="124dp"
+                android:layout_alignParentTop="true"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/eac_logo_full" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="275sp"
+                android:layout_height="match_parent"
+                android:layout_below="@id/imageView"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="@string/welcome_message"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+
+        </RelativeLayout>
 
     </android.support.v4.widget.NestedScrollView>
 
-</RelativeLayout>
+</LinearLayout>

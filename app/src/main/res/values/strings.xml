@@ -213,4 +213,8 @@
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_welcome">Welcome</string>
 
+    <string name="facebook_app_id">434393926968972</string>
+    <string name="fb_login_protocol_scheme">fb434393926968972</string>
+    <string name="title_activity_facebook_sign_in">FacebookSignIn</string>
+
 </resources>

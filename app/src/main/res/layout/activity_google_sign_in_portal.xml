@@ -11,25 +11,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/status_txtView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="" />
-
-        <com.google.android.gms.common.SignInButton
-            android:id="@+id/sign_in_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-        </com.google.android.gms.common.SignInButton>
-
-        <Button
-            android:id="@+id/sign_out_button"
-            android:layout_width="110dp"
-            android:layout_height="wrap_content"
-            android:text="Sign Out" />
-
     </LinearLayout>
 
 </RelativeLayout>

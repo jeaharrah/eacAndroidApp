@@ -67,6 +67,24 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.jeaha.navigationdrawer.MainActivity" />
         </activity>
+        <activity
+            android:name=".LoginPortal"
+            android:label="@string/log_in"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.jeaha.navigationdrawer.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Welcome"
+            android:label="@string/title_activity_welcome"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.jeaha.navigationdrawer.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

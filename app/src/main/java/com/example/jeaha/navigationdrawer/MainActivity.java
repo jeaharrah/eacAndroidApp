@@ -24,11 +24,6 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     Intent intent;
-    RecyclerView recyclerView;
-    ItemAdapter adapter;
-
-    List<Item> itemList;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,9 +49,6 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        ImageView imageView = findViewById(R.id.imageView);
-        TextView textView = findViewById(R.id.textView2);
 
     }
 

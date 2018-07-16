@@ -14,6 +14,10 @@
     <string name="shade_tree_commission"><b><u>Shade Tree Commission</u></b></string>
     <string name="stc">STC</string>
 
+    <!--Log In Values-->
+    <string name="log_in">Log In</string>
+
+
     <!--Values for contact information-->
     <string name="email_us_at">Email us at: </string>
     <string name="email_address">eac.abington@gmail.com</string>
@@ -207,5 +211,6 @@
     <string name="tab_text_2">Tab 2</string>
     <string name="tab_text_3">Tab 3</string>
     <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_welcome">Welcome</string>
 
 </resources>

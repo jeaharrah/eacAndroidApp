@@ -91,7 +91,11 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_about) {
+
+        if (id == R.id.nav_google_signin) {
+            intent = new Intent(MainActivity.this, GoogleSignIn.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_about) {
             intent = new Intent(MainActivity.this, About.class);
             startActivity(intent);
 

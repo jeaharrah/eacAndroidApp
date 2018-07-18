@@ -215,6 +215,8 @@
 
     <string name="facebook_app_id">434393926968972</string>
     <string name="fb_login_protocol_scheme">fb434393926968972</string>
-    <string name="title_activity_facebook_sign_in">FacebookSignIn</string>
+
+    <string name="title_activity_google_sign_in">Google Sign In</string>
+    <string name="title_activity_facebook_sign_in">Facebook Sign In</string>
 
 </resources>

@@ -95,6 +95,9 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_google_signin) {
             intent = new Intent(MainActivity.this, GoogleSignIn.class);
             startActivity(intent);
+        } else if (id == R.id.nav_facebook_signin) {
+            intent = new Intent(MainActivity.this, FacebookSignIn.class);
+            startActivity(intent);
         } else if (id == R.id.nav_about) {
             intent = new Intent(MainActivity.this, About.class);
             startActivity(intent);

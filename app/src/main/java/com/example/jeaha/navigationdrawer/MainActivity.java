@@ -37,13 +37,23 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        FloatingActionButton fabIncrease = findViewById(R.id.fabIncrease);
+        fabIncrease.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 textView.setTextSize(pixelsToSp(MainActivity
                         .this, (textView
                         .getTextSize()) + 4));
+            }
+        });
+
+        FloatingActionButton fabDecrease = findViewById(R.id.fabDecrease);
+        fabDecrease.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                textView.setTextSize(pixelsToSp(MainActivity
+                        .this, (textView
+                        .getTextSize()) - 4));
             }
         });
 

@@ -1,10 +1,13 @@
 package com.example.jeaha.navigationdrawer;
 
+import android.content.Context;
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.widget.RecyclerView;
+import android.util.TypedValue;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -24,6 +27,8 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     Intent intent;
+    ImageView imageView;
+    TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,9 +40,10 @@ public class MainActivity extends AppCompatActivity
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                intent = new Intent(MainActivity.this, Contact.class);
-                startActivity(intent);
+            public void onClick(View v) {
+                textView.setTextSize(pixelsToSp(MainActivity
+                        .this, (textView
+                        .getTextSize()) + 4));
             }
         });
 
@@ -50,7 +56,15 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        imageView = findViewById(R.id.eacLogoImageView);
+        textView = findViewById(R.id.welcomeGreetingMsgTextView);
 
+
+    }
+
+    public static float pixelsToSp(Context context, float px) {
+        float scaledDensity = context.getResources().getDisplayMetrics().scaledDensity;
+        return px / scaledDensity;
     }
 
     @Override
@@ -99,7 +113,7 @@ public class MainActivity extends AppCompatActivity
             intent = new Intent(MainActivity.this, FacebookSignIn.class);
             startActivity(intent);
         } else if (id == R.id.nav_about) {
-            intent = new Intent(MainActivity.this, About.class);
+            intent = new Intent(MainActivity.this, TabbedAbout.class);
             startActivity(intent);
 
         } else if (id == R.id.nav_programs) {

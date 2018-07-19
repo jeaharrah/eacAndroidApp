@@ -34,6 +34,7 @@
                 android:layout_centerVertical="true"
                 android:gravity="center"
                 android:text="@string/welcome_message"
+                android:textSize="14sp"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
 
         </RelativeLayout>

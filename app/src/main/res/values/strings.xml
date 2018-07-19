@@ -218,5 +218,6 @@
 
     <string name="title_activity_google_sign_in">Google Sign In</string>
     <string name="title_activity_facebook_sign_in">Facebook Sign In</string>
+    <string name="eac">EAC</string>
 
 </resources>

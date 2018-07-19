@@ -52,11 +52,9 @@ public class GoogleSignIn extends AppCompatActivity implements GoogleApiClient
 
         statusTextView = (TextView) findViewById(R.id.status_txtView);
         signInButton = (SignInButton) findViewById(R.id.sign_in_button);
-        //findViewById(R.id.sign_in_button).setOnClickListener(this);
         signInButton.setOnClickListener(this);
 
         signOutButton = (Button) findViewById(R.id.sign_out_button);
-        //findViewById(R.id.sign_out_button).setOnClickListener(this);
         signOutButton.setOnClickListener(this);
 
     }

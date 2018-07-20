@@ -3,6 +3,7 @@ package com.example.jeaha.navigationdrawer;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -24,8 +25,11 @@ import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthCredential;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.GoogleAuthProvider;
 
 import org.w3c.dom.Text;
 
@@ -95,6 +99,35 @@ public class GoogleSignIn extends AppCompatActivity implements GoogleApiClient
 
     }
 
+    private void firebaseAuthWithGoogle(GoogleSignInAccount acct) {
+        Log.d(TAG, "firebaseAuthWithGoogle:" + acct.getId());
+        // [START_EXCLUDE silent]
+        //showProgressDialog();
+        // [END_EXCLUDE]
+
+        AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdToken(), null);
+        mAuth.signInWithCredential(credential).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()) {
+                    Log.d(TAG, "signInWithCredential:success");
+                    FirebaseUser user = mAuth.getCurrentUser();
+                    updateUI(user);
+                } else {
+                    Log.w(TAG, "signInWithCredential:failure", task.getException());
+                    Snackbar.make(findViewById(R.id.sign_in_layout), "Authentication Failed.",
+                            Snackbar.LENGTH_SHORT).show();
+                    updateUI(null);
+                }
+
+                // [START_EXCLUDE]
+                //hideProgressDialog();
+                // [END_EXCLUDE]
+            }
+        });
+
+    }
+
 
     private void updateUI(FirebaseUser user) {
         //hideProgressDialog();
@@ -155,8 +188,6 @@ public class GoogleSignIn extends AppCompatActivity implements GoogleApiClient
             GoogleSignInAccount acct = result.getSignInAccount();
             statusTextView.setText("Hello, " + acct.getDisplayName() + "!");
             ImageView userPhoto = findViewById(R.id.userPhoto);
-            ImageView userImageLoading = findViewById(R.id.loadingImageView);
-            userImageLoading.setImageURI(acct.getPhotoUrl());
 
             userPhoto.setImageURI(acct.getPhotoUrl());
 

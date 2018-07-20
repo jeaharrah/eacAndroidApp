@@ -220,9 +220,7 @@
     <string name="title_activity_facebook_sign_in">Facebook Sign In</string>
     <string name="eac">EAC</string>
     <string name="title_activity_firebase_signin">Sign In</string>
-    <resources>
-        <string name="firebase_web_host" translatable="false">abingtoneacandroid.firebaseapp.com</string>
-    </resources>
+    <string name="firebase_web_host" translatable="false">abingtoneacandroid.firebaseapp.com</string>
 
     <string name="signed_out">Signed Out</string>
 

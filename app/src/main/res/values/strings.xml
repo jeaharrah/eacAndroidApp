@@ -220,5 +220,17 @@
     <string name="title_activity_facebook_sign_in">Facebook Sign In</string>
     <string name="eac">EAC</string>
     <string name="title_activity_firebase_signin">Sign In</string>
+    <resources>
+        <string name="firebase_web_host" translatable="false">abingtoneacandroid.firebaseapp.com</string>
+    </resources>
+
+    <string name="signed_out">Signed Out</string>
+
+    <string name="google_status_fmt">Google User: %s</string>
+    <string name="google_title_text">Google Sign In</string>
+
+    <string name="firebase_status_fmt">Firebase User: %s</string>
+    <string name="firebase_user_management">Firebase User Management</string>
+
 
 </resources>

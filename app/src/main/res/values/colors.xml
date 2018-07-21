@@ -14,6 +14,8 @@
     <color name="blueAccent">#0099cc</color>
     <color name="redAccent">#d50000</color>
 
+    <color name="faintGrey">#F5F5F5</color>
     <color name="lightGrey">#cfd8dc</color>
+    <color name="darkGrey">#9e9e9e</color>
 
 </resources>

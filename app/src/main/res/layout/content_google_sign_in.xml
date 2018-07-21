@@ -7,7 +7,7 @@
     android:layout_gravity="center"
     android:layout_marginTop="50sp"
     android:orientation="vertical"
-    tools:context=".GoogleSignIn"
+    tools:context=".GoogleSignInActivity"
     tools:showIn="@layout/activity_google_sign_in">
 
     <LinearLayout

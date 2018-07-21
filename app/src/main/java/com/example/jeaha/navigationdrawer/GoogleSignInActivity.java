@@ -11,11 +11,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -26,7 +25,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
-public class GoogleSignIn extends BaseActivity implements View.OnClickListener {
+public class GoogleSignInActivity extends BaseActivity implements View.OnClickListener {
 
     SignInButton signInButton;
     Button signOutButton;
@@ -65,6 +64,8 @@ public class GoogleSignIn extends BaseActivity implements View.OnClickListener {
                 .DEFAULT_SIGN_IN).requestEmail().build();
         // [END config_signin]
 
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+
         // [START initialize_auth]
         mAuth = FirebaseAuth.getInstance();
         // [END initialize_auth]
@@ -87,7 +88,9 @@ public class GoogleSignIn extends BaseActivity implements View.OnClickListener {
 
         // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
         if (requestCode == RC_SIGN_IN) {
-            /*Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
+
+            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
+
             try {
                 // Google Sign In was successful, authenticate with Firebase
                 GoogleSignInAccount account = task.getResult(ApiException.class);
@@ -98,7 +101,7 @@ public class GoogleSignIn extends BaseActivity implements View.OnClickListener {
                 // [START_EXCLUDE]
                 updateUI(null);
                 // [END_EXCLUDE]
-            }*/
+            }
         }
     }
     // [END onactivityresult]
@@ -168,7 +171,8 @@ public class GoogleSignIn extends BaseActivity implements View.OnClickListener {
     }
 
     private void updateUI(FirebaseUser user) {
-        //hideProgressDialog();
+        hideProgressDialog();
+
         if (user != null) {
             mStatusTextView.setText(getString(R.string.google_status_fmt, user.getEmail()));
             mDetailTextView.setText(getString(R.string.firebase_status_fmt, user.getUid()));

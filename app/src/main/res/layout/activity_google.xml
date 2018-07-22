@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/faintGrey"
     android:orientation="vertical"
-    android:weightSum="4">
+    android:weightSum="1">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -15,8 +15,8 @@
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?android:attr/actionBarSize"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:background="?android:attr/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
@@ -26,64 +26,72 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2.5"
+        android:layout_weight="0.65"
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
         <ImageView
-            style="@style/ThemeOverlay.FirebaseIcon"
             android:id="@+id/google_icon"
-            android:contentDescription="@string/desc_firebase_lockup"
-            android:src="@drawable/firebase_lockup_400"
+            style="@style/ThemeOverlay.FirebaseIcon"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:contentDescription="@string/desc_firebase_lockup"
+            android:src="@drawable/firebase_lockup_400" />
 
         <TextView
             android:id="@+id/title_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/title_bottom_margin"
             android:fontFamily="sans-serif"
+            android:layout_marginTop="0dp"
             android:text="@string/google_title_text"
             android:theme="@style/ThemeOverlay.MyTitleText" />
 
         <TextView
             android:id="@+id/status"
             style="@style/ThemeOverlay.MyTextDetail"
-            android:text="@string/signed_out"
-            android:fontFamily="sans-serif" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/signed_out" />
 
         <TextView
             android:id="@+id/detail"
             style="@style/ThemeOverlay.MyTextDetail"
-            tools:text="Firebase User ID: 123456789abc"
-            android:fontFamily="sans-serif" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:fontFamily="sans-serif"
+            tools:text="Firebase User ID: 123456789abc" />
 
     </LinearLayout>
 
     <RelativeLayout
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1.5"
-        android:background="@color/lightGrey">
+        android:background="@color/lightGrey"
+        android:layout_weight="0.35">
 
         <com.google.android.gms.common.SignInButton
             android:id="@+id/sign_in_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:fontFamily="sans-serif"
             android:visibility="visible"
-            tools:visibility="gone"
-            android:fontFamily="sans-serif" />
+            tools:visibility="gone" />
 
         <LinearLayout
             android:id="@+id/sign_out_and_disconnect"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:layout_margin="0dp"
             android:orientation="vertical"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
             android:visibility="gone"
             tools:visibility="visible">
 
@@ -93,9 +101,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
+                android:fontFamily="sans-serif"
                 android:text="@string/sign_out"
-                android:theme="@style/ThemeOverlay.MyDarkButton"
-                android:fontFamily="sans-serif" />
+                android:theme="@style/ThemeOverlay.MyDarkButton" />
 
             <Button
                 android:id="@+id/disconnect_button"
@@ -103,9 +111,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
+                android:fontFamily="sans-serif"
                 android:text="@string/disconnect"
-                android:theme="@style/ThemeOverlay.MyDarkButton"
-                android:fontFamily="sans-serif" />
+                android:theme="@style/ThemeOverlay.MyDarkButton" />
         </LinearLayout>
 
     </RelativeLayout>

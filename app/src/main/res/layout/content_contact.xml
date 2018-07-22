@@ -47,11 +47,11 @@
                 android:layout_marginTop="15sp"
                 android:drawablePadding="15sp"
                 android:drawableStart="@drawable/ic_info_black_24dp"
-                android:gravity="center"
+                android:gravity="start"
                 android:paddingEnd="15sp"
                 android:paddingStart="15dp"
                 android:text="@string/about_the_eac"
-                android:textAlignment="center"
+                android:textAlignment="viewStart"
 
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                 android:textSize="26sp"
@@ -70,12 +70,12 @@
                 android:layout_marginTop="15sp"
                 android:drawablePadding="15sp"
                 android:drawableStart="@drawable/ic_email_24dp"
-                android:gravity="center"
+                android:gravity="start"
                 android:paddingEnd="15sp"
                 android:paddingStart="15dp"
                 android:text="@string/email_us_at"
 
-                android:textAlignment="center"
+                android:textAlignment="viewStart"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                 android:textSize="26sp"
 

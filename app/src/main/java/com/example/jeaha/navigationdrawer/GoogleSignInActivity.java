@@ -27,10 +27,12 @@ import com.google.firebase.auth.GoogleAuthProvider;
 
 public class GoogleSignInActivity extends BaseActivity implements View.OnClickListener {
 
-    SignInButton signInButton;
+    com.google.android.gms.common.SignInButton signInButton;
     Button signOutButton;
+    Button disconnectButton;
     TextView mStatusTextView;
     TextView mDetailTextView;
+    ImageView userPhoto;
 
     // [START declare_auth]
     private FirebaseAuth mAuth;
@@ -44,24 +46,31 @@ public class GoogleSignInActivity extends BaseActivity implements View.OnClickLi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_google_sign_in);
+        setContentView(R.layout.activity_google);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //Views
-        mStatusTextView = (TextView) findViewById(R.id.status_txtView);
-        mDetailTextView = (TextView) findViewById(R.id.userDetailTextView);
+        mStatusTextView = (TextView) findViewById(R.id.status);
+        mDetailTextView = (TextView) findViewById(R.id.detail);
+
+        //Buttons
+        signInButton = findViewById(R.id.sign_in_button);
+        signOutButton = findViewById(R.id.sign_out_button);
+        disconnectButton = findViewById(R.id.disconnect_button);
 
         //Button listeners
-        findViewById(R.id.sign_in_button).setOnClickListener(this);
-        findViewById(R.id.sign_out_button).setOnClickListener(this);
+        signInButton.setOnClickListener(this);
+        signOutButton.setOnClickListener(this);
+        disconnectButton.setOnClickListener(this);
 
         // [START config_signin]
         // Configure Google Sign In
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions
-                .DEFAULT_SIGN_IN).requestEmail().build();
+                .DEFAULT_SIGN_IN).requestIdToken("603018144921-g3l8n0qcrl6vt1ev15pf7eekncludcpe.apps.googleusercontent.com").requestEmail().build();
+
         // [END config_signin]
 
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
@@ -170,15 +179,21 @@ public class GoogleSignInActivity extends BaseActivity implements View.OnClickLi
         });
     }
 
+    TextView titleTextView;
+
     private void updateUI(FirebaseUser user) {
         hideProgressDialog();
 
         if (user != null) {
-            mStatusTextView.setText(getString(R.string.google_status_fmt, user.getEmail()));
+            mStatusTextView.setText(getString(R.string.google_status_fmt, user.getDisplayName(),
+                    user.getEmail()));
+            titleTextView.setText(getString(R.string.google_status_fmt, user.getDisplayName(),
+                    user.getEmail()));
             mDetailTextView.setText(getString(R.string.firebase_status_fmt, user.getUid()));
 
             findViewById(R.id.sign_in_button).setVisibility(View.GONE);
             findViewById(R.id.sign_out_and_disconnect).setVisibility(View.VISIBLE);
+
         } else {
             mStatusTextView.setText(R.string.signed_out);
             mDetailTextView.setText(null);

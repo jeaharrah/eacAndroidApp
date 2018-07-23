@@ -87,7 +87,7 @@
         "Susan Myerov\n"
         "Karin McGarry-Rosen\n"
         "John Sorrentino\n\n"
-        "Thank you to our former chairpersons:\n"
+        <b>"Thank you to our former chairpersons:\n"</b>
         "Cathy Gauthier, 2005-2010, and\n"
         "Robert W. Montgomery Jr., 1980-2005.\n\n"
 
@@ -109,8 +109,8 @@
         "Each member serves as a volunteer on the Commission for a term of 5 years.\n\n"
 
         <b>"Current STC members include:\n\n"</b>
-        "Rita Stevens, Chairperson - abingtontrees@gmail.com\n"
-        "Thank you to former chairperson George Mott, 1996-2010."
+        "Rita Stevens, Chairperson - abingtontrees@gmail.com\n\n"
+        <b>"Thank you to former chairperson George Mott, 1996-2010."</b>
 
         <!--To ensure that the bottom-most lines of text are visible in the TextView-->
         "\n\n"

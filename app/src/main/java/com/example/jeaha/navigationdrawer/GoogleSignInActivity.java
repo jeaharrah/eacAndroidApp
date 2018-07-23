@@ -187,8 +187,6 @@ public class GoogleSignInActivity extends BaseActivity implements View.OnClickLi
         if (user != null) {
             mStatusTextView.setText(getString(R.string.google_status_fmt, user.getDisplayName(),
                     user.getEmail()));
-            titleTextView.setText(getString(R.string.google_status_fmt, user.getDisplayName(),
-                    user.getEmail()));
             mDetailTextView.setText(getString(R.string.firebase_status_fmt, user.getUid()));
 
             findViewById(R.id.sign_in_button).setVisibility(View.GONE);

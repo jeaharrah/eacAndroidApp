@@ -17,8 +17,10 @@ import android.widget.TextView;
 
 public class Contact extends AppCompatActivity {
 
+    TextView tv2;
     TextView tv4;
     TextView tv5;
+    TextView tv8;
     Intent intent;
 
     ViewTreeObserver.OnGlobalLayoutListener onGlobalLayoutListener =
@@ -32,6 +34,12 @@ public class Contact extends AppCompatActivity {
                     } else if (1 < tv5.getLineCount()) {
                         tv5.setTextSize(TypedValue.COMPLEX_UNIT_PX,
                                 tv5.getTextSize() - 2);
+                    } else if (1 < tv2.getLineCount()) {
+                        tv2.setTextSize(TypedValue.COMPLEX_UNIT_PX,
+                                tv2.getTextSize() - 2);
+                    } else if (1 < tv8.getLineCount()) {
+                        tv8.setTextSize(TypedValue.COMPLEX_UNIT_PX,
+                                tv8.getTextSize() - 2);
                     }
 
                 }
@@ -47,7 +55,7 @@ public class Contact extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         TextView tv1 = (TextView) findViewById(R.id.txtViewContactEmailGreeting);
-        TextView tv2 = (TextView) findViewById(R.id.txtViewContactEmail);
+        tv2 = (TextView) findViewById(R.id.txtViewContactEmail);
         TextView tv3 = (TextView) findViewById(R.id.txtViewVisitUs);
         tv4 = (TextView) findViewById(R.id.txtViewWebpage);
 
@@ -60,7 +68,7 @@ public class Contact extends AppCompatActivity {
         tv5 = (TextView) findViewById(R.id.txtViewStcContactHeader);
         TextView tv6 = (TextView) findViewById(R.id.txtViewStcAbout);
         TextView tv7 = (TextView) findViewById(R.id.txtViewStcContactEmailGreeting);
-        TextView tv8 = (TextView) findViewById(R.id.txtViewStcContactEmail);
+        tv8 = (TextView) findViewById(R.id.txtViewStcContactEmail);
         TextView tv9 = (TextView) findViewById(R.id.txtViewStcVisitUs);
         TextView tv10 = (TextView) findViewById(R.id.txtViewStcWebpage);
         TextView tv11 = (TextView) findViewById(R.id.txtViewEacAbout);
@@ -69,6 +77,12 @@ public class Contact extends AppCompatActivity {
         vto.addOnGlobalLayoutListener(onGlobalLayoutListener);
 
         vto = tv5.getViewTreeObserver();
+        vto.addOnGlobalLayoutListener(onGlobalLayoutListener);
+
+        vto = tv2.getViewTreeObserver();
+        vto.addOnGlobalLayoutListener(onGlobalLayoutListener);
+
+        vto = tv8.getViewTreeObserver();
         vto.addOnGlobalLayoutListener(onGlobalLayoutListener);
 
         tv6.setOnClickListener(new View.OnClickListener() {
@@ -94,7 +108,6 @@ public class Contact extends AppCompatActivity {
 
         tv10.setText(Html.fromHtml(getString(R.string.stc_website_link)));
         tv10.setMovementMethod(LinkMovementMethod.getInstance());
-
 
     }
 

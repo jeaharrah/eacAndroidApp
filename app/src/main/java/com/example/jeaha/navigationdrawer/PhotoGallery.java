@@ -4,12 +4,12 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.widget.GridView;
+
 import java.util.ArrayList;
 
 public class PhotoGallery extends AppCompatActivity {
 
     GridView gridView;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,9 +21,14 @@ public class PhotoGallery extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        final Integer[] image = new Integer[]{R.drawable.calendar_item_gradient, R.drawable
-                .common_full_open_on_phone, R.drawable.ic_link_24dp, R.drawable
-                .ic_info_outline_24dp, R.drawable.ic_info_black_24dp};
+        final Integer[] image = new Integer[]{
+                R.drawable.calendar_item_gradient,
+                R.drawable
+                        .common_full_open_on_phone,
+                R.drawable.ic_link_24dp,
+                R.drawable
+                        .ic_info_outline_24dp,
+                R.drawable.ic_info_black_24dp};
 
         gridView = (GridView) findViewById(R.id.gridView);
 
@@ -61,49 +66,5 @@ public class PhotoGallery extends AppCompatActivity {
             R.drawable.ic_email_24dp
 
     };
-
-    /*public class GridAdapter extends ArrayAdapter {
-        private Integer[] Image;
-        private int resource;
-        private LayoutInflater inflater;
-
-        public GridAdapter(Context context, int resource, Integer[] image) {
-            super(context, resource, image);
-            Image = image;
-            this.resource = resource;
-            inflater = (LayoutInflater)PhotoGallery.this.getSystemService(LAYOUT_INFLATER_SERVICE);
-
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-
-            ViewHolder Holder = null;
-
-            if (convertView == null) {
-                Holder = new ViewHolder();
-                convertView = inflater.inflate(resource, null);
-                Holder.IMAGE = (ImageView) convertView.findViewById(R.id.imageID);
-                convertView.setTag(Holder);
-
-            } else {
-                Holder = (ViewHolder) convertView.getTag();
-            }
-
-            Holder.IMAGE.setImageResource(Image[position]);
-            Holder.IMAGE.setScaleType(ImageView.ScaleType.CENTER_CROP);
-
-            return convertView;
-
-        }
-
-        class ViewHolder {
-            private ImageView IMAGE;
-        }
-
-
-
-    }*/
-
 
 }

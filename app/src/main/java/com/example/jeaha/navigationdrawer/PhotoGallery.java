@@ -1,15 +1,26 @@
 package com.example.jeaha.navigationdrawer;
 
+import android.content.res.AssetManager;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.widget.GridView;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 
 public class PhotoGallery extends AppCompatActivity {
 
     GridView gridView;
+    String[] fileListInSubfolder;
+    Integer[] imageIDs;
+    int id;
+    final AssetManager assetManager = getAssets();
+    final String photoPath = "eac_photos";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,50 +32,34 @@ public class PhotoGallery extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        final Integer[] image = new Integer[]{
-                R.drawable.calendar_item_gradient,
-                R.drawable
-                        .common_full_open_on_phone,
-                R.drawable.ic_link_24dp,
-                R.drawable
-                        .ic_info_outline_24dp,
-                R.drawable.ic_info_black_24dp};
+        try {
+            // for assets/subFolderInAssets add only subfolder name
+            fileListInSubfolder = assetManager.list(photoPath);
+
+            if (fileListInSubfolder == null) {
+                // dir does not exist or is not a directory
+            } else {
+                for (int i = 0; i < fileListInSubfolder.length; i++) {
+                    // Get filename of file or directory
+                    String filename = fileListInSubfolder[i];
+
+                    for (int j = 0; j < imageIDs.length; j++) {
+                        id = getResources().getIdentifier(filename, "assets/eac_photos",
+                                getPackageName());
+                        id = imageIDs[j];
+                    }
+                }
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         gridView = (GridView) findViewById(R.id.gridView);
 
-        gridView.setAdapter(new PhotoAdapter(this));
+        gridView.setAdapter(new PhotoAdapter(this, imageIDs));
 
     }
 
-    private ArrayList<PhotoCell> prepareData() {
-        ArrayList<PhotoCell> singlePhoto = new ArrayList<>();
-        for (int i = 0; i < image_titles.length; i++) {
-            PhotoCell photoCell = new PhotoCell();
-            photoCell.setImage(image_ids[i]);
-            photoCell.setTitle(image_titles[i]);
-            singlePhoto.add(photoCell);
-        }
-
-        return singlePhoto;
-    }
-
-    private final String image_titles[] = {
-            "Image 1",
-            "Image 2",
-            "Image 3",
-            "Image 4",
-            "Image 5",
-            "Image 6",
-    };
-
-    private final Integer image_ids[] = {
-            R.drawable.ic_email_24dp,
-            R.drawable.ic_email_24dp,
-            R.drawable.ic_email_24dp,
-            R.drawable.ic_email_24dp,
-            R.drawable.ic_email_24dp,
-            R.drawable.ic_email_24dp
-
-    };
 
 }

@@ -10,23 +10,13 @@ import android.widget.ImageView;
 public class PhotoAdapter extends BaseAdapter {
     private Context context;
 
-    public Integer[] images = {
-            R.drawable.calendar_item_gradient,
-            R.drawable.common_full_open_on_phone,
-            R.drawable.ic_link_24dp,
-            R.drawable.ic_info_outline_24dp,
-            R.drawable.ic_info_black_24dp,
-            R.drawable.ic_email_24dp,
-            R.drawable.ic_menu_gallery,
+    public Integer[] images;
 
 
-    };
-
-    public PhotoAdapter(Context c) {
+    public PhotoAdapter(Context c, Integer[] i) {
         context = c;
-
+        images = i;
     }
-
 
     @Override
     public int getCount() {

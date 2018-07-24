@@ -16,10 +16,42 @@
                             <entry key="launcher">
                               <value>
                                 <PersistentState>
+                                  <option name="children">
+                                    <map>
+                                      <entry key="foregroundText">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="ffffff" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                      <entry key="foregroundTextAsset">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="fontFamily" value="Berlin Sans FB" />
+                                                <entry key="text" value="EAC" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                    </map>
+                                  </option>
                                   <option name="values">
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
                                       <entry key="backgroundColor" value="1b5e20" />
+                                      <entry key="backgroundLayerName" value="launcher_brnd" />
+                                      <entry key="foregroundAssetType" value="TEXT" />
+                                      <entry key="foregroundImage" value="C:\Users\jeaha\OneDrive\Desktop\HelloWorldApp\NavigationDrawer\app\src\main\assets\eac_photos\img10_audubonbirdwalk_lorimerpark.JPG" />
+                                      <entry key="foregroundLayerName" value="launcher_frgnd" />
+                                      <entry key="outputName" value="launcher" />
                                     </map>
                                   </option>
                                 </PersistentState>

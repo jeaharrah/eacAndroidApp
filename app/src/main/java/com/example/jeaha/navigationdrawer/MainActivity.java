@@ -58,10 +58,10 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        //navigationView.setItemIconTintList(null);
 
         imageView = findViewById(R.id.eacLogoImageView);
         textView = findViewById(R.id.welcomeGreetingMsgTextView);
-
 
     }
 
@@ -130,11 +130,6 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_gallery) {
             intent = new Intent(MainActivity.this, PhotoGallery.class);
             startActivity(intent);
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

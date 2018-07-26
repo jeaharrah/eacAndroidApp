@@ -5,32 +5,42 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_google_signin"
-            android:icon="@drawable/ic_person_24dp"
-            android:title="Sign In via Google" />
-        <item
-            android:id="@+id/nav_facebook_signin"
-            android:icon="@drawable/com_facebook_button_icon_blue"
-            android:title="Sign In via Facebook" />
-        <item
-            android:id="@+id/nav_about"
-            android:icon="@drawable/ic_info_black_24dp"
-            android:title="@string/about" />
-        <item
-            android:id="@+id/nav_programs"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="@string/edu_programs" />
-        <item
-            android:id="@+id/nav_contact"
-            android:icon="@drawable/ic_email_24dp"
-            android:title="@string/contact" />
-        <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/photo_gallery" />
+            android:title="@string/log_in"
+            android:id="@+id/sign_in_header">
+            <menu>
+                <item
+                    android:id="@+id/nav_google_signin"
+                    android:icon="@drawable/ic_google_24dp"
+                    android:iconTint=""
+                    android:title="@string/google_title_text" />
+                <item
+                    android:id="@+id/nav_facebook_signin"
+                    android:icon="@drawable/ic_facebook_24dp"
+                    android:title="@string/facebook_title_text" />
+                <item
+                    android:id="@+id/nav_about"
+                    android:icon="@drawable/ic_info_black_24dp"
+                    android:title="@string/about" />
+                <item
+                    android:id="@+id/nav_programs"
+                    android:icon="@drawable/ic_calendar_clock_24dp"
+                    android:title="@string/calendar" />
+                <item
+                    android:id="@+id/nav_contact"
+                    android:icon="@drawable/ic_email_24dp"
+                    android:title="@string/contact" />
+                <item
+                    android:id="@+id/nav_gallery"
+                    android:icon="@drawable/ic_menu_gallery"
+                    android:title="@string/photo_gallery" />
+            </menu>
+        </item>
+
     </group>
 
-    <item android:title="Communicate">
+    <item
+        android:title="Communicate"
+        android:icon="@drawable/ic_increase_text_24dp">
         <menu>
             <item
                 android:id="@+id/nav_share"

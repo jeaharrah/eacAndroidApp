@@ -18,4 +18,7 @@
     <color name="lightGrey">#cfd8dc</color>
     <color name="darkGrey">#9e9e9e</color>
 
+    <!--Navigation drawer icon fill color-->
+    <color name="royalBlue">#3949ab</color>
+
 </resources>

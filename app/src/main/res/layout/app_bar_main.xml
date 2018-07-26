@@ -32,7 +32,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/fab_margin"
-            app:srcCompat="@drawable/ic_increase_text_24dp" />
+            app:srcCompat="@drawable/ic_increase_text_24dp"
+            android:elevation="6dp"
+            app:borderWidth="2dp" />
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/fabDecrease"
@@ -40,7 +42,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/fabIncrease"
             android:layout_margin="@dimen/fab_margin"
-            app:srcCompat="@drawable/ic_decrease_text_24dp" />
+            app:srcCompat="@drawable/ic_decrease_text_24dp"
+            android:elevation="6dp"
+            app:borderWidth="2dp" />
 
     </RelativeLayout>
 

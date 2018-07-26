@@ -1,6 +1,7 @@
 package com.example.jeaha.navigationdrawer;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -35,11 +36,24 @@ public class PhotoAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        int w = getScreenWidth();
+        int ww = w / 2;
+        int h = getScreenHeight();
+
         ImageView imageView = new ImageView(context);
         imageView.setImageResource(images[position]);
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-        imageView.setLayoutParams(new GridView.LayoutParams(240, 240));
+        imageView.setLayoutParams(new GridView.LayoutParams(ww, 450));
+        imageView.setFitsSystemWindows(true);
         return imageView;
+    }
+
+    public static int getScreenWidth() {
+        return Resources.getSystem().getDisplayMetrics().widthPixels;
+    }
+
+    public static int getScreenHeight() {
+        return Resources.getSystem().getDisplayMetrics().heightPixels;
     }
 
 }

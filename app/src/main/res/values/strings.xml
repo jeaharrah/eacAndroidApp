@@ -58,9 +58,9 @@
         <b>"Welcome to the Abington Township Environmental Advisory Council (EAC) and Shade Tree"
             "Commission (STC) mobile app!\n\n"</b>
         "The EAC and STC work together to provide a clean and healthy environment for residents in"
-        " our community through various programs outlined in this app.\n\n"
+        "our community through various programs outlined in this app.\n\n"
         "Public meetings are usually held the second Tuesday of the month at 7:30 pm at the"
-        " township building.\n\n"
+        "township building.\n\n"
 
         "The meetings are open to the public and we welcome your comments and suggestions."
 
@@ -218,6 +218,8 @@
 
     <string name="title_activity_google_sign_in">Google Sign In</string>
     <string name="title_activity_facebook_sign_in">Facebook Sign In</string>
+    <string name="title_activity_volunteer_sign_in_google">Sign-In via Google</string>
+    <string name="title_activity_volunteer_sign_in_facebook">Sign-In via Facebook</string>
     <string name="eac">EAC</string>
     <string name="title_activity_firebase_signin">Sign In</string>
     <string name="firebase_web_host" translatable="false">abingtoneacandroid.firebaseapp.com</string>
@@ -287,9 +289,11 @@
 
     <string name="google_status_fmt">Google User: %s, %s</string>
     <string name="google_title_text">Google Sign In</string>
+    <string name="google_login_portal">Google Login Portal</string>
 
     <string name="facebook_status_fmt">Facebook User: %s</string>
     <string name="facebook_title_text">Facebook Sign In</string>
+    <string name="facebook_login_portal">Facebook Login Portal</string>
 
     <string name="emailpassword_status_fmt">Email User: %1$s (verified: %2$b)</string>
     <string name="emailpassword_title_text">Email and Password</string>

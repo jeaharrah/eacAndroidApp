@@ -2,6 +2,7 @@ package com.example.jeaha.navigationdrawer;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.view.View;
@@ -58,7 +59,10 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        //navigationView.setItemIconTintList(null);
+        navigationView.setItemIconTintList(ColorStateList.valueOf(getColor(R.color
+                .mediumGreen)));
+        navigationView.setItemTextColor(ColorStateList.valueOf(getColor(R.color
+                .mediumGreen)));
 
         imageView = findViewById(R.id.eacLogoImageView);
         textView = findViewById(R.id.welcomeGreetingMsgTextView);
@@ -108,12 +112,11 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-
         if (id == R.id.nav_google_signin) {
             intent = new Intent(MainActivity.this, GoogleSignInActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_facebook_signin) {
-            intent = new Intent(MainActivity.this, FacebookSignIn.class);
+            intent = new Intent(MainActivity.this, FacebookLoginActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_about) {
             intent = new Intent(MainActivity.this, TabbedAbout.class);

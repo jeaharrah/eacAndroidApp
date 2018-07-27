@@ -26,26 +26,30 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="bottom|end">
+        android:gravity="top|end">
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/fabIncrease"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/fab_margin"
-            app:srcCompat="@drawable/ic_increase_text_24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="14dp"
+            android:layout_marginTop="62dp"
             android:elevation="6dp"
-            app:borderWidth="2dp" />
+            app:borderWidth="2dp"
+            app:srcCompat="@drawable/ic_increase_text_24dp" />
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/fabDecrease"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/fabIncrease"
-            android:layout_margin="@dimen/fab_margin"
-            app:srcCompat="@drawable/ic_decrease_text_24dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/fabIncrease"
+            android:layout_marginTop="121dp"
             android:elevation="6dp"
-            app:borderWidth="2dp" />
+            app:borderWidth="2dp"
+            app:srcCompat="@drawable/ic_decrease_text_24dp" />
 
     </RelativeLayout>
 

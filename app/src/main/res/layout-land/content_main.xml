@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity"
-    tools:showIn="@layout/app_bar_main"
-    android:theme="@style/AppTheme.NoActionBar">
+    tools:showIn="@layout/app_bar_main">
 
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -19,25 +19,25 @@
 
             <ImageView
                 android:id="@+id/eacLogoImageView"
-                android:contentDescription="@string/eac_logo_descriptor"
                 android:layout_width="match_parent"
                 android:layout_height="124dp"
                 android:layout_alignParentTop="true"
-                android:scaleType="fitCenter"
                 android:background="@color/logoBackground"
+                android:contentDescription="@string/eac_logo_descriptor"
+                android:scaleType="fitCenter"
                 app:srcCompat="@drawable/eac_logo_full" />
 
             <TextView
                 android:id="@+id/welcomeGreetingMsgTextView"
-                android:layout_width="275sp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@id/eacLogoImageView"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:gravity="center"
                 android:text="@string/welcome_message"
-                android:textSize="14sp"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                android:textSize="16sp" />
 
         </RelativeLayout>
 

@@ -26,32 +26,24 @@
         </item>
     </group>
 
-    <!--<item android:title="Communicate">-->
-    <!--<menu>-->
-    <!--<item-->
-    <!--android:id="@+id/nav_share"-->
-    <!--android:icon="@drawable/ic_menu_share"-->
-    <!--android:title="Share" />-->
-    <!--<item-->
-    <!--android:id="@+id/nav_send"-->
-    <!--android:icon="@drawable/ic_menu_send_24dp"-->
-    <!--android:title="Send" />-->
-    <!--</menu>-->
-    <!--</item>-->
-
-    <item
-        android:id="@+id/sign_in_header"
-        android:title="@string/log_in">
-        <menu>
-            <item
-                android:id="@+id/nav_google_signin"
-                android:icon="@drawable/menu_google_signin"
-                android:title="@string/google_title_text" />
-            <item
-                android:id="@+id/nav_facebook_signin"
-                android:icon="@drawable/menu_facebook_signin"
-                android:title="@string/facebook_title_text" />
-        </menu>
-    </item>
+    <group>
+        <item
+            android:id="@+id/sign_in_header"
+            android:title="@string/log_in">
+            <menu>
+                <item
+                    android:id="@+id/nav_google_signin"
+                    android:icon="@drawable/menu_google_signin"
+                    android:title="@string/google_title_text" />
+                <item
+                    android:id="@+id/nav_facebook_signin"
+                    android:icon="@drawable/menu_facebook_signin"
+                    android:title="@string/facebook_title_text" />
+            </menu>
+        </item>
+    </group>
 
 </menu>
+
+
+    <!--<item android:title="Communicate">--><!--<menu>--><!--<item--><!--android:id="@+id/nav_share"--><!--android:icon="@drawable/ic_menu_share"--><!--android:title="Share" />--><!--<item--><!--android:id="@+id/nav_send"--><!--android:icon="@drawable/ic_menu_send_24dp"--><!--android:title="Send" />--><!--</menu>--><!--</item>-->

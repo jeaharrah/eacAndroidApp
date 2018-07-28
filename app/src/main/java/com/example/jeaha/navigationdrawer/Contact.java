@@ -88,7 +88,7 @@ public class Contact extends AppCompatActivity {
         tv6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent = new Intent(Contact.this, About.class);
+                intent = new Intent(Contact.this, TabbedAbout.class);
                 startActivity(intent);
             }
 
@@ -97,7 +97,7 @@ public class Contact extends AppCompatActivity {
         tv11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent = new Intent(Contact.this, About.class);
+                intent = new Intent(Contact.this, TabbedAbout.class);
                 startActivity(intent);
             }
 

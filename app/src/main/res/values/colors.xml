@@ -23,7 +23,7 @@
 
 
     <!--Navigation drawer icon fill color-->
-    <color name="royalBlue">#3949ab</color>
+    <color name="iconBackground">#000000</color>
     <color name="logoBackground">#90F731</color>
 
 </resources>

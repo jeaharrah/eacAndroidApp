@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     Intent intent;
+    Intent actionItem;
     ImageView imageView;
     TextView textView;
 
@@ -102,6 +103,9 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.action_settings) {
             return true;
         }
+        /*else if (id == R.id.action_home) {
+            actionItem = new Intent(MainActivity.this, MainActivity.class);
+        }*/
 
         return super.onOptionsItemSelected(item);
     }

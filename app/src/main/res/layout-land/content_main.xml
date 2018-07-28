@@ -37,7 +37,7 @@
                 android:gravity="center"
                 android:text="@string/welcome_message"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
-                android:textSize="16sp" />
+                android:textSize="18sp" />
 
         </RelativeLayout>
 

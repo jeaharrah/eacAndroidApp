@@ -26,12 +26,18 @@
         <item name="colorAccent">@color/blueAccent</item>
 
         <!--Attributes of action bar-->
-        <item name="android:fontFamily">serife</item>
+        <item name="android:fontFamily">serif</item>
 
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="MyTabLayoutTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
 
 </resources>

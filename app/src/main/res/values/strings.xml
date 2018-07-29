@@ -73,11 +73,11 @@
 
         <b><u>"Environmental Advisory Council\n\n"</u></b>
         "The EAC was formally created in 1974 and the Council’s charge is found in Chapter 10 of"
-        "the Code of the Township of Abington."
-        "Some of these responsibilities now fall under the preview of a township department rather"
-        "than the volunteer EAC board. The EAC consists of seven township residents appointed by"
-        "the Board of Commissioners. Each member serves as a volunteer on the Council for a term"
-        "of 3 years.\n\n"
+        " the Code of the Township of Abington."
+        " Some of these responsibilities now fall under the preview of a township department rather"
+        " than the volunteer EAC board. The EAC consists of seven township residents appointed by"
+        " the Board of Commissioners. Each member serves as a volunteer on the Council for a term"
+        " of 3 years.\n\n"
 
         <b>"Current EAC members include:\n\n"</b>
         "Jennifer Sherwood, Chairperson\n"
@@ -101,11 +101,12 @@
 
     <string name="about_stc_information">
         <b><u>"Shade Tree Commission\n\n"</u></b>
-        "Visit the STC's website at www.abingtontrees.org.\n"
+        "Visit the STC's website at www.abingtontrees.org. "
         "The STC was created in 1975 and the Commission’s duties are provided in Chapter 42 of the"
-        "Code of the Township of Abington. Some of these responsibilities fall under the"
-        "auspices of a township department rather than the volunteer STC board.\n"
-        "The STC is comprised of three township residents appointed by the Board of Commissioners."
+        " Code of the Township of Abington. Some of these responsibilities fall under the"
+        " auspices of a township department rather than the volunteer STC board.\n\n"
+        "The STC is comprised of three township residents appointed by the Board of "
+        "Commissioners.\n\n"
         "Each member serves as a volunteer on the Commission for a term of 5 years.\n\n"
 
         <b>"Current STC members include:\n\n"</b>

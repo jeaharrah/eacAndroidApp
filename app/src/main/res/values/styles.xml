@@ -10,6 +10,7 @@
         <!--Attributes of action bar-->
         <item name="android:fontFamily">serif</item>
         <item name="android:actionBarStyle">@color/darkGreen</item>
+        <item name="android:textAppearanceListItem">@style/DrawerStyle</item>
 
         <!--Ensuring that the theme has an action bar and title-->
         <item name="windowActionBar">true</item>
@@ -24,6 +25,7 @@
         <item name="colorPrimary">@color/darkGreen</item>
         <item name="colorPrimaryDark">@color/mediumGreen</item>
         <item name="colorAccent">@color/blueAccent</item>
+        <item name="android:textAppearanceListItem">@style/DrawerStyle</item>
 
         <!--Attributes of action bar-->
         <item name="android:fontFamily">serif</item>
@@ -37,6 +39,14 @@
     <style name="MyTabLayoutTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
         <item name="android:textSize">18sp</item>
         <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="DrawerStyle" parent="Base.TextAppearance.AppCompat">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColorPrimary">@color/darkGreen</item>
+        <item name="android:textColorSecondary">@color/darkGrey</item>
+        <item name="android:subtitleTextColor">@color/darkGreen</item>
+        <item name="android:fontFamily">serif</item>
     </style>
 
 

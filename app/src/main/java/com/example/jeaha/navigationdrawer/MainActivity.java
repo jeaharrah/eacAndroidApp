@@ -60,10 +60,7 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        navigationView.setItemIconTintList(ColorStateList.valueOf(getColor(R.color
-                .mediumGreen)));
-        navigationView.setItemTextColor(ColorStateList.valueOf(getColor(R.color
-                .mediumGreen)));
+
 
         imageView = findViewById(R.id.eacLogoImageView);
         textView = findViewById(R.id.welcomeGreetingMsgTextView);

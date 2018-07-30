@@ -26,7 +26,9 @@
         </item>
     </group>
 
-    <group>
+    <group
+        android:checkableBehavior="single"
+        android:menuCategory="secondary">
         <item
             android:id="@+id/sign_in_header"
             android:title="@string/log_in">
@@ -44,6 +46,3 @@
     </group>
 
 </menu>
-
-
-    <!--<item android:title="Communicate">--><!--<menu>--><!--<item--><!--android:id="@+id/nav_share"--><!--android:icon="@drawable/ic_menu_share"--><!--android:title="Share" />--><!--<item--><!--android:id="@+id/nav_send"--><!--android:icon="@drawable/ic_menu_send_24dp"--><!--android:title="Send" />--><!--</menu>--><!--</item>-->

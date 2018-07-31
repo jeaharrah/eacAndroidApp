@@ -5,11 +5,13 @@
 
     <group android:checkableBehavior="single">
         <item android:title="@string/menu_title">
-            <menu>
+            <menu android:id="@+id/menu">
                 <item
                     android:id="@+id/nav_about"
                     android:icon="@drawable/menu_about"
-                    android:title="@string/about" />
+                    android:title="@string/about"
+                    android:checked="true"
+                    android:enabled="true" />
                 <item
                     android:id="@+id/nav_programs"
                     android:icon="@drawable/menu_calendar"

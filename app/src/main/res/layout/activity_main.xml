@@ -6,8 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:openDrawer="start"
-    android:theme="@style/AppTheme.NoActionBar">
+    android:theme="@style/AppTheme.NoActionBar"
+    tools:openDrawer="start">
 
     <include
         layout="@layout/app_bar_main"
@@ -22,7 +22,12 @@
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_main"
         app:menu="@menu/activity_main_drawer"
-        app:itemTextAppearance="@style/DrawerStyle" />
+        app:itemTextAppearance="@style/DrawerStyle"
+        app:itemIconTint="@color/nav_icon_tint_selector"
+        app:itemTextColor="@color/nav_item_text_selector" />
 
 
 </android.support.v4.widget.DrawerLayout>
+
+
+    <!--app:itemTextColor="@drawable/nav_item_text_selector"--><!--app:itemBackground="@drawable/nav_item_color_selector"--><!--app:itemIconTint="@drawable/nav_icon_tint_selector"-->

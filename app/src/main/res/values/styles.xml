@@ -25,9 +25,7 @@
         <item name="colorPrimary">@color/darkGreen</item>
         <item name="colorPrimaryDark">@color/mediumGreen</item>
         <item name="colorAccent">@color/blueAccent</item>
-        <item name="android:textAppearanceListItem">@style/DrawerStyle</item>
 
-        <!--Attributes of action bar-->
         <item name="android:fontFamily">serif</item>
 
     </style>
@@ -42,11 +40,8 @@
     </style>
 
     <style name="DrawerStyle" parent="Base.TextAppearance.AppCompat">
-        <item name="android:textSize">14sp</item>
-        <item name="android:textColorPrimary">@color/darkGreen</item>
-        <item name="android:textColorSecondary">@color/darkGrey</item>
-        <item name="android:subtitleTextColor">@color/darkGreen</item>
-        <item name="android:fontFamily">serif</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">sans-serif</item>
     </style>
 
 

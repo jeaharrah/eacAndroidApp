@@ -26,8 +26,6 @@
         <item name="android:textColor">@color/black</item>
         <item name="android:actionBarStyle">@color/colorPrimaryDark</item>
 
-        <item name="android:textAppearanceListItem">@style/DrawerStyle</item>
-
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
@@ -49,7 +47,7 @@
 
     <!-- Dark Buttons -->
     <style name="ThemeOverlay.MyDarkButton" parent="ThemeOverlay.AppCompat.Dark">
-        <item name="colorButtonNormal">@color/darkGrey</item>
+        <item name="colorButtonNormal">@color/mediumGrey</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:layout_marginRight">4dp</item>
         <item name="android:layout_marginLeft">4dp</item>
@@ -86,11 +84,8 @@
     </style>
 
     <style name="DrawerStyle" parent="Base.TextAppearance.AppCompat">
-        <item name="android:textSize">16sp</item>
-        <item name="android:textColorPrimary">@color/black</item>
-        <item name="android:textColorSecondary">@color/darkGreen</item>
-        <item name="android:subtitleTextColor">@color/darkGreen</item>
-        <item name="android:fontFamily">serif</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">sans-serif</item>
     </style>
 
 </resources>

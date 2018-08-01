@@ -78,14 +78,14 @@
         <item name="android:textSize">36sp</item>
     </style>
 
-    <style name="MyTabLayoutTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+    <style name="MyTabLayoutTextAppearance" parent="Base.TextAppearance.AppCompat">
         <item name="android:textSize">18sp</item>
         <item name="android:textAllCaps">true</item>
     </style>
 
     <style name="DrawerStyle" parent="Base.TextAppearance.AppCompat">
         <item name="android:textSize">20sp</item>
-        <item name="android:fontFamily">sans-serif</item>
+        <!--<item name="android:fontFamily">sans-serif</item>-->
     </style>
 
 </resources>

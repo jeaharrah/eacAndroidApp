@@ -3,7 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
+    <group
+        android:checkableBehavior="single"
+        android:id="@+id/main_menu_group">
         <item android:title="@string/menu_title">
             <menu android:id="@+id/menu">
                 <item
@@ -30,7 +32,8 @@
 
     <group
         android:checkableBehavior="single"
-        android:menuCategory="secondary">
+        android:menuCategory="secondary"
+        android:id="@+id/sign_in_group">
         <item
             android:id="@+id/sign_in_header"
             android:title="@string/log_in">
@@ -43,6 +46,24 @@
                     android:id="@+id/nav_facebook_signin"
                     android:icon="@drawable/menu_facebook_signin"
                     android:title="@string/facebook_title_text" />
+            </menu>
+        </item>
+    </group>
+
+    <group
+        android:checkableBehavior="single"
+        android:id="@+id/social_media_group">
+        <item
+            android:id="@+id/social_media_header"
+            android:title="@string/social_media_heading">
+            <menu>
+                <item
+                    android:id="@+id/nav_like_us_on_fb"
+                    android:icon="@drawable/ic_facebook_outline_24dp"
+                    android:title="@string/like_us_on_fb" />
+                <item
+                    android:id="@+id/nav_caption"
+                    android:title="@string/social_media_abington_eac" />
             </menu>
         </item>
     </group>

@@ -105,15 +105,6 @@
             tools:replace="android:value" />
 
         <activity
-            android:name=".FacebookSignIn"
-            android:label="@string/title_activity_facebook_sign_in"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.jeaha.navigationdrawer.MainActivity" />
-        </activity>
-        <activity
             android:name="com.facebook.CustomTabActivity"
             android:exported="true">
             <intent-filter>
@@ -124,15 +115,6 @@
 
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".FirebaseSignin"
-            android:label="@string/title_activity_firebase_signin"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.jeaha.navigationdrawer.MainActivity" />
         </activity>
     </application>
 

@@ -3,6 +3,7 @@ package com.example.jeaha.navigationdrawer;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.ColorStateList;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.view.View;
@@ -134,6 +135,11 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_gallery) {
             intent = new Intent(MainActivity.this, PhotoGallery.class);
             startActivity(intent);
+
+        } else if (id == R.id.nav_like_us_on_fb) {
+            intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/Abington.EAC/"));
+            startActivity(intent);
+
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

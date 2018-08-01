@@ -12,7 +12,7 @@
         android:id="@+id/chooser_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Select a Sign-In Method"
+        android:text="@string/chooser_select_a_method_header"
         android:gravity="center"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
         android:fontFamily="sans-serif-black"

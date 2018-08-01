@@ -26,8 +26,8 @@
     <!--Navigation drawer icon fill color-->
     <color name="iconBackground">#000000</color>
     <color name="logoBackground">#90F731</color>
-    <color name="tab_background_selected">@color/darkGreen</color>
-    <color name="tab_background_unselected">@color/mediumGreen</color>
+    <color name="tab_background_selected">@color/mediumGreen</color>
+    <color name="tab_background_unselected">@color/darkGreen</color>
 
 </resources>
 

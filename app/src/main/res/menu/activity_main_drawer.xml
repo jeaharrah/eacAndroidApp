@@ -39,6 +39,10 @@
             android:title="@string/log_in">
             <menu>
                 <item
+                    android:id="@+id/nav_chooser_signin"
+                    android:icon="@drawable/ic_person_24dp"
+                    android:title="@string/sign_in" />
+                <item
                     android:id="@+id/nav_google_signin"
                     android:icon="@drawable/menu_google_signin"
                     android:title="@string/google_title_text" />
@@ -52,7 +56,8 @@
 
     <group
         android:checkableBehavior="single"
-        android:id="@+id/social_media_group">
+        android:id="@+id/social_media_group"
+        android:menuCategory="secondary">
         <item
             android:id="@+id/social_media_header"
             android:title="@string/social_media_heading">

@@ -24,6 +24,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".About"
             android:label="@string/title_activity_about"
@@ -33,6 +34,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.jeaha.navigationdrawer.MainActivity" />
         </activity>
+
         <activity
             android:name=".Calendar"
             android:label="@string/title_activity_calendar"
@@ -42,6 +44,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.jeaha.navigationdrawer.MainActivity" />
         </activity>
+
         <activity
             android:name=".Contact"
             android:label="@string/title_activity_contact"
@@ -51,6 +54,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.jeaha.navigationdrawer.MainActivity" />
         </activity>
+
         <activity
             android:name=".PhotoGallery"
             android:label="@string/title_activity_photo_gallery"
@@ -60,6 +64,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.jeaha.navigationdrawer.MainActivity" />
         </activity>
+
         <activity
             android:name=".TabbedAbout"
             android:label="@string/about_abington_committees"
@@ -69,9 +74,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.jeaha.navigationdrawer.MainActivity" />
         </activity>
+
         <activity
-            android:name=".GoogleSignInActivity"
-            android:label="@string/title_activity_volunteer_sign_in_google"
+            android:name=".ChooserActivity"
+            android:label="@string/sign_in"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
@@ -80,13 +86,33 @@
         </activity>
 
         <activity
-            android:name=".FacebookLoginActivity"
-            android:label="@string/title_activity_volunteer_sign_in_facebook"
-            android:parentActivityName=".MainActivity"
+            android:name=".GoogleSignInActivity"
+            android:label="@string/title_activity_volunteer_sign_in_google"
+            android:parentActivityName=".ChooserActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.jeaha.navigationdrawer.MainActivity" />
+                android:value="com.example.jeaha.navigationdrawer.ChooserActivity" />
+        </activity>
+
+        <activity
+            android:name=".FacebookLoginActivity"
+            android:label="@string/title_activity_volunteer_sign_in_facebook"
+            android:parentActivityName=".ChooserActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.jeaha.navigationdrawer.ChooserActivity" />
+        </activity>
+
+        <activity
+            android:name=".EmailPasswordActivity"
+            android:label="@string/email_sign_in"
+            android:parentActivityName=".ChooserActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.jeaha.navigationdrawer.ChooserActivity" />
         </activity>
 
         <activity

@@ -167,14 +167,19 @@ public class EmailPasswordActivity extends BaseActivity implements
                         findViewById(R.id.verify_email_button).setEnabled(true);
 
                         if (task.isSuccessful()) {
-                            Toast.makeText(EmailPasswordActivity.this,
+/*                            Toast toastSuccess = Toast.makeText(EmailPasswordActivity.this,
                                     "Verification email sent to " + user.getEmail(),
-                                    Toast.LENGTH_SHORT).show();
+                                    Toast.LENGTH_SHORT);
+                            toastSuccess.setText("Verification email sent to " + user.getEmail());
+                            toastSuccess.show();*/
+
                         } else {
                             Log.e(TAG, "sendEmailVerification", task.getException());
-                            Toast.makeText(EmailPasswordActivity.this,
+/*                            Toast toastFailed = Toast.makeText(EmailPasswordActivity.this,
                                     "Failed to send verification email.",
-                                    Toast.LENGTH_SHORT).show();
+                                    Toast.LENGTH_SHORT);
+                            toastFailed.setText("Failed to send verification email.");
+                            toastFailed.show();*/
                         }
                         // [END_EXCLUDE]
                     }

@@ -14,6 +14,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.elmargomez.typer.Font;
+import com.elmargomez.typer.Typer;
+
 public class ChooserActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     private static final Class[] CLASSES = new Class[]{
@@ -34,6 +37,7 @@ public class ChooserActivity extends AppCompatActivity implements AdapterView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chooser);
 
+        TextView tv1 = findViewById(R.id.chooser_header);
         TextView tv2 = findViewById(R.id.chooser_caption);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             tv2.setJustificationMode(Layout.JUSTIFICATION_MODE_INTER_WORD);
@@ -43,6 +47,8 @@ public class ChooserActivity extends AppCompatActivity implements AdapterView.On
 
         // Set up ListView and Adapter
         ListView listView = findViewById(R.id.list_view);
+        tv1.setTypeface(Typer.set(ChooserActivity.this).getFont(Font.ROBOTO_BLACK));
+        tv2.setTypeface(Typer.set(ChooserActivity.this).getFont(Font.ROBOTO_REGULAR));
 
         MyArrayAdapter adapter = new MyArrayAdapter(this, android.R.layout.simple_list_item_2, CLASSES);
         adapter.setDescriptionIds(DESCRIPTION_IDS);

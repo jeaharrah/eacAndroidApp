@@ -318,7 +318,7 @@
     <string name="home">Home</string>
     <string name="social_media_abington_eac">"@Abington.EAC"</string>
     <string name="email_sign_in">Email Sign-In</string>
-    <string name="ggrc_signin_description">"Sign into this app via accounts you already have with "
+    <string name="ggrc_signin_description">"Sign into this app via accounts you already have with"
         "third-party vendors or <b>create an account</b> (via the Email &amp; Password option) to"
         "view your GoGreen Rewards Card credits and earn more when you volunteer!"</string>
     <string name="chooser_select_a_method_header">Select a Sign-In Method</string>

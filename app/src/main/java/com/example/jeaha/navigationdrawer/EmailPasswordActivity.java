@@ -16,6 +16,7 @@ package com.example.jeaha.navigationdrawer;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -23,6 +24,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.elmargomez.typer.Font;
+import com.elmargomez.typer.Typer;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -47,6 +50,10 @@ public class EmailPasswordActivity extends BaseActivity implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_emailpassword);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // Views
         mStatusTextView = findViewById(R.id.status);
@@ -165,6 +172,12 @@ public class EmailPasswordActivity extends BaseActivity implements
                         // [START_EXCLUDE]
                         // Re-enable button
                         findViewById(R.id.verify_email_button).setEnabled(true);
+                        String toastText = "";
+                        View toastMessages = findViewById(R.id.toastMessages);
+                        TextView verifyEmailStatus = findViewById(R.id.verifyEmailStatus);
+                        verifyEmailStatus.setTypeface(Typer.set(EmailPasswordActivity.this).getFont(Font
+                                .ROBOTO_MEDIUM));
+
 
                         if (task.isSuccessful()) {
 /*                            Toast toastSuccess = Toast.makeText(EmailPasswordActivity.this,
@@ -173,6 +186,12 @@ public class EmailPasswordActivity extends BaseActivity implements
                             toastSuccess.setText("Verification email sent to " + user.getEmail());
                             toastSuccess.show();*/
 
+                            toastText = "Verification email sent to " + user.getEmail();
+                            verifyEmailStatus.setText(toastText);
+                            verifyEmailStatus.setBackgroundColor(getColor(R.color.darkGreen));
+                            verifyEmailStatus.setTextColor(getColor(R.color.white));
+                            toastMessages.setVisibility(View.VISIBLE);
+
                         } else {
                             Log.e(TAG, "sendEmailVerification", task.getException());
 /*                            Toast toastFailed = Toast.makeText(EmailPasswordActivity.this,
@@ -180,6 +199,14 @@ public class EmailPasswordActivity extends BaseActivity implements
                                     Toast.LENGTH_SHORT);
                             toastFailed.setText("Failed to send verification email.");
                             toastFailed.show();*/
+
+                            toastText = "Failed to send verification email";
+
+                            verifyEmailStatus.setText(toastText);
+                            verifyEmailStatus.setBackgroundColor(getColor(R.color.redAccent));
+                            verifyEmailStatus.setTextColor(getColor(R.color.black));
+
+                            toastMessages.setVisibility(View.VISIBLE);
                         }
                         // [END_EXCLUDE]
                     }

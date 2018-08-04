@@ -13,6 +13,8 @@
     <color name="lightestGreen">#b9f6ca</color>
     <color name="darkGreen">#1b5e20</color>
     <color name="blueAccent">#0099cc</color>
+    <color name="royalBlue">#304ffe</color>
+    <color name="purple">#651fff</color>
     <color name="redAccent">#d50000</color>
 
     <color name="faintGrey">#F5F5F5</color>

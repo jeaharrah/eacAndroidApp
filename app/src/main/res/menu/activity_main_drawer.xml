@@ -42,14 +42,6 @@
                     android:id="@+id/nav_chooser_signin"
                     android:icon="@drawable/ic_person_24dp"
                     android:title="@string/sign_in" />
-                <item
-                    android:id="@+id/nav_google_signin"
-                    android:icon="@drawable/menu_google_signin"
-                    android:title="@string/google_title_text" />
-                <item
-                    android:id="@+id/nav_facebook_signin"
-                    android:icon="@drawable/menu_facebook_signin"
-                    android:title="@string/facebook_title_text" />
             </menu>
         </item>
     </group>

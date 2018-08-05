@@ -26,40 +26,32 @@
         android:paddingBottom="@dimen/activity_vertical_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin">
+        android:paddingTop="8dp">
 
         <TextView
-        android:id="@+id/chooser_header"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/chooser_select_a_method_header"
-        android:gravity="center"
-        android:textSize="24sp"
-        android:background="@color/redAccent"
-        android:textColor="@color/white"
-            android:paddingTop="16dp"
-            android:paddingBottom="16dp" />
+            android:id="@+id/chooser_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/chooser_select_a_method_header"
+            android:textSize="28sp" />
 
-    <TextView
-        android:id="@+id/chooser_caption"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/ggrc_signin_description"
-        android:gravity="start"
-        android:textSize="18sp"
-        android:maxLines="5"
-        android:background="@color/com_facebook_messenger_blue"
-        android:textColor="@color/white"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
-        android:paddingStart="8dp"
-        android:paddingEnd="8dp" />
+        <TextView
+            android:id="@+id/chooser_caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            android:text="@string/ggrc_signin_description"
+            android:fontFamily="@font/roboto_light"
+            android:textSize="18sp" />
 
-    <ListView
-        android:id="@+id/list_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/lightestGreen" />
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 

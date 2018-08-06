@@ -54,7 +54,39 @@
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_marginTop="25dp"
-            android:elevation="10dp"
+            android:elevation="10sp"
+            android:background="@drawable/google_button_style"
+            android:drawableStart="@drawable/googleg_standard_color_18"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:text="@string/fui_sign_in_with_google"
+            android:textAppearance="@style/SignInButtonText"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+
+        <Button
+            android:layout_width="230dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:elevation="10sp"
+            android:background="@drawable/email_button_style"
+            android:drawableStart="@drawable/ic_email_24dp"
+            android:drawableTint="@color/white"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:text="@string/fui_sign_in_with_email"
+            android:textAppearance="@style/SignInButtonText"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <Button
+            android:layout_width="230dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:elevation="10sp"
             android:background="@drawable/fb_button_style"
             android:drawableStart="@drawable/ic_facebook_24dp"
             android:drawableTint="@color/white"
@@ -64,23 +96,6 @@
             android:textAppearance="@style/SignInButtonText"
             android:textColor="@color/white"
             android:textSize="14sp" />
-
-
-        <Button
-            android:layout_width="230dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="25dp"
-            android:background="@drawable/email_button_style"
-            android:drawableStart="@drawable/ic_email_24dp"
-            android:drawableTint="@color/white"
-            android:paddingEnd="10dp"
-            android:paddingStart="10dp"
-            android:text="@string/fui_sign_in_with_email"
-            android:textAppearance="@style/SignInButtonText"
-            android:textColor="@color/white"
-            android:textSize="14sp"
-            android:elevation="@dimen/cardview_default_elevation" />
 
         <ListView
             android:id="@+id/list_view"

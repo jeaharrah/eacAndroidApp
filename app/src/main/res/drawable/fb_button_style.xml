@@ -3,8 +3,8 @@
     <solid android:color="@color/fui_bgFacebook" />
 
     <size
-        android:height="75dp"
-        android:width="300dp" />
+        android:height="50dp"
+        android:width="230dp" />
 
     <padding
         android:left="1dp"
@@ -12,6 +12,6 @@
         android:right="1dp"
         android:bottom="1dp" />
 
-    <corners android:radius="5dp" />
+    <corners android:radius="3dp" />
 
 </shape>

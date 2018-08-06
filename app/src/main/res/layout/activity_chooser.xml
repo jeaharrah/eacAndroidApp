@@ -40,19 +40,47 @@
             android:id="@+id/chooser_caption"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto_light"
             android:gravity="center"
             android:paddingBottom="8dp"
             android:paddingEnd="8dp"
             android:paddingStart="8dp"
             android:text="@string/ggrc_signin_description"
-            android:fontFamily="@font/roboto_light"
             android:textSize="18sp" />
 
         <Button
-            android:layout_width="250dp"
-            android:layout_height="60dp"
+            android:layout_width="230dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
-            android:background="@color/fui_bgFacebook" />
+            android:layout_marginTop="25dp"
+            android:elevation="10dp"
+            android:background="@drawable/fb_button_style"
+            android:drawableStart="@drawable/ic_facebook_24dp"
+            android:drawableTint="@color/white"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:text="@string/fui_sign_in_with_facebook"
+            android:textAppearance="@style/SignInButtonText"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+
+        <Button
+            android:layout_width="230dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/email_button_style"
+            android:drawableStart="@drawable/ic_email_24dp"
+            android:drawableTint="@color/white"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:text="@string/fui_sign_in_with_email"
+            android:textAppearance="@style/SignInButtonText"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:elevation="@dimen/cardview_default_elevation" />
 
         <ListView
             android:id="@+id/list_view"

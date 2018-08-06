@@ -103,8 +103,9 @@ public class EmailPasswordActivity extends BaseActivity implements
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "createUserWithEmail:failure", task.getException());
-                            Toast.makeText(EmailPasswordActivity.this, "Authentication failed.",
-                                    Toast.LENGTH_SHORT).show();
+                            Toast.makeText(EmailPasswordActivity.this, "Authentication failed. " +
+                                            "" + task.getException(),
+                                    Toast.LENGTH_LONG).show();
                             updateUI(null);
                         }
 
@@ -137,8 +138,9 @@ public class EmailPasswordActivity extends BaseActivity implements
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithEmail:failure", task.getException());
-                            Toast.makeText(EmailPasswordActivity.this, "Authentication failed.",
-                                    Toast.LENGTH_SHORT).show();
+                            Toast.makeText(EmailPasswordActivity.this, "Authentication failed. " +
+                                            "" + task.getException(),
+                                    Toast.LENGTH_LONG).show();
                             updateUI(null);
                         }
 
@@ -178,13 +180,12 @@ public class EmailPasswordActivity extends BaseActivity implements
                         verifyEmailStatus.setTypeface(Typer.set(EmailPasswordActivity.this).getFont(Font
                                 .ROBOTO_MEDIUM));
 
-
                         if (task.isSuccessful()) {
-/*                            Toast toastSuccess = Toast.makeText(EmailPasswordActivity.this,
+                            Toast toastSuccess = Toast.makeText(EmailPasswordActivity.this,
                                     "Verification email sent to " + user.getEmail(),
                                     Toast.LENGTH_SHORT);
                             toastSuccess.setText("Verification email sent to " + user.getEmail());
-                            toastSuccess.show();*/
+                            toastSuccess.show();
 
                             toastText = "Verification email sent to " + user.getEmail();
                             verifyEmailStatus.setText(toastText);
@@ -194,11 +195,11 @@ public class EmailPasswordActivity extends BaseActivity implements
 
                         } else {
                             Log.e(TAG, "sendEmailVerification", task.getException());
-/*                            Toast toastFailed = Toast.makeText(EmailPasswordActivity.this,
+                            Toast toastFailed = Toast.makeText(EmailPasswordActivity.this,
                                     "Failed to send verification email.",
                                     Toast.LENGTH_SHORT);
                             toastFailed.setText("Failed to send verification email.");
-                            toastFailed.show();*/
+                            toastFailed.show();
 
                             toastText = "Failed to send verification email";
 

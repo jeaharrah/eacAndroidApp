@@ -10,8 +10,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
 
 public class ChooserActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
@@ -44,8 +47,33 @@ public class ChooserActivity extends AppCompatActivity implements AdapterView.On
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        Button emailBtn = findViewById(R.id.email_chooser_btn);
+        Button googleBtn = findViewById(R.id.google_chooser_button);
+        Button facebookBtn = findViewById(R.id.fb_chooser_btn);
+
+        emailBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ChooserActivity.this, EmailPasswordActivity.class));
+            }
+        });
+
+        googleBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ChooserActivity.this, GoogleSignInActivity.class));
+            }
+        });
+
+        facebookBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ChooserActivity.this, FacebookLoginActivity.class));
+            }
+        });
+
         // Set up ListView and Adapter
-        ListView listView = findViewById(R.id.list_view);
+        /*ListView listView = findViewById(R.id.list_view);
 
         MyArrayAdapter adapter = new MyArrayAdapter(this, android.R.layout.simple_list_item_2,
                 CLASSES, CLASS_NAMES);
@@ -53,7 +81,7 @@ public class ChooserActivity extends AppCompatActivity implements AdapterView.On
         adapter.setClassNames(CLASS_NAMES);
 
         listView.setAdapter(adapter);
-        listView.setOnItemClickListener(this);
+        listView.setOnItemClickListener(this);*/
     }
 
     @Override

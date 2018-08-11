@@ -28,7 +28,7 @@
   <component name="ProjectResources">
     <resource url="http://schemas.android.com/apk/res/android" location="$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/71548d05dceb30af4f6552326a473723/res/drawable/common_google_signin_btn_icon_light.xml" />
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

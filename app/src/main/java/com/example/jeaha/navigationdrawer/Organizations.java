@@ -128,11 +128,11 @@ public class Organizations extends AppCompatActivity {
             weekday = e.getString("weekday");
 
             Item item = new Item(title, shortDescription, location, time, month, date, weekday);
-            itemList.add(item);
+            bizList.add(item);
 
         }
 
-        return itemList;
+        return bizList;
 
     }
 

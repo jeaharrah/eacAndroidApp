@@ -5,4 +5,6 @@
     <item name="menu_photo_gallery" type="drawable">@drawable/ic_menu_gallery_24dp</item>
     <item name="menu_google_signin" type="drawable">@drawable/ic_google_24dp</item>
     <item name="menu_facebook_signin" type="drawable">@drawable/ic_facebook_24dp</item>
+    <item name="menu_ggrc" type="drawable">@drawable/ic_star_border_24dp</item>
+
 </resources>

@@ -6,8 +6,12 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.TextView;
+
 
 public class GGRC extends AppCompatActivity {
+
+    private FacebookLoginActivity userName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +29,11 @@ public class GGRC extends AppCompatActivity {
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        TextView userTxtView = findViewById(R.id.ggrc_user_txtView);
+        String name = userName.user.getDisplayName();
+        userTxtView.setText(getString(R.string.ggrc_user_greeting_fmt, name));
+
     }
 
 }

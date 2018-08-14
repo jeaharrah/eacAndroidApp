@@ -125,6 +125,8 @@ public class FacebookLoginActivity extends BaseActivity implements
     }
     // [END on_activity_result]
 
+    FirebaseUser user;
+
     // [START auth_with_facebook]
     private void handleFacebookAccessToken(AccessToken token) {
         Log.d(TAG, "handleFacebookAccessToken:" + token);
@@ -140,7 +142,7 @@ public class FacebookLoginActivity extends BaseActivity implements
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithCredential:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
+                            user = mAuth.getCurrentUser();
                             updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.
@@ -180,6 +182,18 @@ public class FacebookLoginActivity extends BaseActivity implements
             findViewById(R.id.button_facebook_login).setVisibility(View.VISIBLE);
             findViewById(R.id.button_facebook_signout).setVisibility(View.GONE);
         }
+    }
+
+    protected String getName() {
+        String name = null;
+
+        if (user != null) {
+            name = user.getDisplayName();
+        } else {
+            name = "";
+        }
+
+        return name;
     }
 
     @Override

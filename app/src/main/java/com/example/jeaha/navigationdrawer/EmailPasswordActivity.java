@@ -174,40 +174,19 @@ public class EmailPasswordActivity extends BaseActivity implements
                         // [START_EXCLUDE]
                         // Re-enable button
                         findViewById(R.id.verify_email_button).setEnabled(true);
-                        String toastText = "";
-                        View toastMessages = findViewById(R.id.toastMessages);
-                        TextView verifyEmailStatus = findViewById(R.id.verifyEmailStatus);
-                        verifyEmailStatus.setTypeface(Typer.set(EmailPasswordActivity.this).getFont(Font
-                                .ROBOTO_MEDIUM));
 
                         if (task.isSuccessful()) {
                             Toast toastSuccess = Toast.makeText(EmailPasswordActivity.this,
                                     "Verification email sent to " + user.getEmail(),
-                                    Toast.LENGTH_SHORT);
-                            toastSuccess.setText("Verification email sent to " + user.getEmail());
+                                    Toast.LENGTH_LONG);
                             toastSuccess.show();
-
-                            toastText = "Verification email sent to " + user.getEmail();
-                            verifyEmailStatus.setText(toastText);
-                            verifyEmailStatus.setBackgroundColor(getColor(R.color.darkGreen));
-                            verifyEmailStatus.setTextColor(getColor(R.color.white));
-                            toastMessages.setVisibility(View.VISIBLE);
 
                         } else {
                             Log.e(TAG, "sendEmailVerification", task.getException());
                             Toast toastFailed = Toast.makeText(EmailPasswordActivity.this,
-                                    "Failed to send verification email.",
-                                    Toast.LENGTH_SHORT);
-                            toastFailed.setText("Failed to send verification email.");
+                                    "Failed to send verification email. " + task.getException(),
+                                    Toast.LENGTH_LONG);
                             toastFailed.show();
-
-                            toastText = "Failed to send verification email";
-
-                            verifyEmailStatus.setText(toastText);
-                            verifyEmailStatus.setBackgroundColor(getColor(R.color.redAccent));
-                            verifyEmailStatus.setTextColor(getColor(R.color.black));
-
-                            toastMessages.setVisibility(View.VISIBLE);
                         }
                         // [END_EXCLUDE]
                     }

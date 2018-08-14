@@ -69,8 +69,4 @@
         <item name="android:textColor">#ffffff</item>
     </style>
 
-    <style name="AppTheme.NoActionBar.AppBarOverlay" />
-
-    <style name="AppTheme.NoActionBar.PopupOverlay" />
-
 </resources>

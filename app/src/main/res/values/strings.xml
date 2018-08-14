@@ -321,6 +321,7 @@
         "third-party vendors or <b>create an account</b> (via the Email &amp; Password option) to"
         "view your GoGreen Rewards Card credits and earn more when you volunteer!"</string>
     <string name="chooser_select_a_method_header">Select a Sign-In Method</string>
+    <string name="title_activity_ggrc">GoGreen Rewards Card</string>
 
     <!--<string name="default_web_client_id">603018144921-g3l8n0qcrl6vt1ev15pf7eekncludcpe.apps.googleusercontent.com</string>-->
 

@@ -327,5 +327,22 @@
 
     <!--<string name="default_web_client_id">603018144921-g3l8n0qcrl6vt1ev15pf7eekncludcpe.apps.googleusercontent.com</string>-->
 
+    <string name="ggrc_actions_you_can_take">
+        Green Actions You Can Take to Earn 10 Points
+    </string>
+
+    <string name="ggrc_list_actions">
+        Attend EAC or STC meeting/event\n
+        &#9733; (1 point) \n\n
+        Donate food at Township Public Works Recycling Event\n
+        &#9733; (1 point) \n\n
+        Install a rain barrel, rain garden or STC tree; make your yard an Audubon Bird Habitat;
+        volunteer for the EAC or STC; or join the EAC or STC as an Associate Member\n
+        &#9733;&#9733; (2 points)\n\n
+        Use 100% clean energy, a green vehicle, or bike\n
+        &#9733;&#9733;&#9733;&#9733;&#9733; (5 points)\n\n
+        Install geothermal or solar at home or business \n
+        &#9733;&#9733;&#9733;&#9733;&#9733;&#9733;&#9733;&#9733;&#9733;&#9733; (10 points)
+</string>
 
 </resources>

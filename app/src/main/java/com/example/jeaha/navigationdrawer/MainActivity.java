@@ -118,6 +118,10 @@ public class MainActivity extends AppCompatActivity
             intent = new Intent(MainActivity.this, TabbedAbout.class);
             startActivity(intent);
 
+        } else if (id == R.id.nav_ggrc) {
+            intent = new Intent(MainActivity.this, GGRC.class);
+            startActivity(intent);
+
         } else if (id == R.id.nav_programs) {
             intent = new Intent(MainActivity.this, Calendar.class);
             startActivity(intent);

@@ -13,6 +13,10 @@
                     android:icon="@drawable/menu_about"
                     android:title="@string/about" />
                 <item
+                    android:id="@+id/nav_ggrc"
+                    android:icon="@drawable/menu_ggrc"
+                    android:title="@string/my_ggrc" />
+                <item
                     android:id="@+id/nav_programs"
                     android:icon="@drawable/menu_calendar"
                     android:title="@string/calendar" />

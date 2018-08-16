@@ -10,7 +10,7 @@
         <!--Attributes of action bar-->
         <item name="android:fontFamily">@font/roboto_regular</item>
         <item name="android:actionBarStyle">@color/darkGreen</item>
-        <item name="android:textAppearanceListItem">@style/DrawerStyle</item>
+        <item name="android:textAppearanceListItem">@style/DrawerItemNameTextStyle</item>
 
         <!--Ensuring that the theme has an action bar and title-->
         <item name="windowActionBar">true</item>
@@ -39,9 +39,14 @@
         <item name="android:textAllCaps">true</item>
     </style>
 
-    <style name="DrawerStyle" parent="Base.TextAppearance.AppCompat">
+    <style name="DrawerItemNameTextStyle">
         <item name="android:textSize">16sp</item>
         <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="DrawerCaptionTextStyle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/roboto_light</item>
     </style>
 
     <style name="SignInButtonText">

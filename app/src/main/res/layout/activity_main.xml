@@ -22,7 +22,7 @@
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_main"
         app:menu="@menu/activity_main_drawer"
-        app:itemTextAppearance="@style/DrawerStyle"
+        app:itemTextAppearance="@style/DrawerItemNameTextStyle"
         app:itemIconTint="@color/nav_icon_tint_selector"
         app:itemTextColor="@color/nav_item_text_selector" />
 

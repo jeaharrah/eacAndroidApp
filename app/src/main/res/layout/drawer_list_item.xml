@@ -36,7 +36,7 @@
         android:layout_toEndOf="@id/drawer_icon"
         android:gravity="center_vertical|start"
         android:paddingEnd="0dp"
-        android:paddingStart="0dp"
+        android:paddingStart="3dp"
         android:paddingTop="3dp"
         android:text="Item Name Here"
         android:textAppearance="@style/DrawerItemNameTextStyle"
@@ -51,7 +51,7 @@
         android:gravity="center_vertical|start"
         android:paddingBottom="3dp"
         android:paddingEnd="0dp"
-        android:paddingStart="0dp"
+        android:paddingStart="3dp"
         android:text="Caption of the navigation drawer item looks like this."
         android:textAppearance="@style/DrawerCaptionTextStyle" />
 

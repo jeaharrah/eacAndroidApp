@@ -24,15 +24,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.elmargomez.typer.Font;
-import com.elmargomez.typer.Typer;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class EmailPasswordActivity extends BaseActivity implements
+public class EmailPasswordActivity extends SignInBaseActivity implements
         View.OnClickListener {
 
     private static final String TAG = "EmailPassword";

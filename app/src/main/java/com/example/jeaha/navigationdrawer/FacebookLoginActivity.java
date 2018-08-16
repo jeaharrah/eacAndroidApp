@@ -41,7 +41,7 @@ import com.google.firebase.auth.FirebaseUser;
 /**
  * Demonstrate Firebase Authentication using a Facebook access token.
  */
-public class FacebookLoginActivity extends BaseActivity implements
+public class FacebookLoginActivity extends SignInBaseActivity implements
         View.OnClickListener {
 
     private static final String TAG = "FacebookLogin";

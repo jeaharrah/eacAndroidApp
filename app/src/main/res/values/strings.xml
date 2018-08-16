@@ -343,6 +343,27 @@
         &#9733;&#9733;&#9733;&#9733;&#9733; (5 points)\n\n
         Install geothermal or solar at home or business \n
         &#9733;&#9733;&#9733;&#9733;&#9733;&#9733;&#9733;&#9733;&#9733;&#9733; (10 points)
-</string>
+    </string>
+
+    <string-array name="nav_drawer_items">
+        <item>About</item>
+        <item>My GGRC</item>
+        <item>Calendar</item>
+        <item>Contact Us</item>
+        <item>Photo Gallery</item>
+        <item>Sign In</item>
+        <item>Like Us On Facebook @Abington.EAC</item>
+
+    </string-array>
+
+    <array name="nav_drawer_icons">
+        <item>@drawable/menu_about</item>
+        <item>@drawable/menu_ggrc</item>
+        <item>@drawable/menu_calendar</item>
+        <item>@drawable/menu_contact</item>
+        <item>@drawable/menu_photo_gallery</item>
+        <item>@drawable/ic_person_24dp</item>
+        <item>@drawable/ic_facebook_outline_24dp</item>
+    </array>
 
 </resources>

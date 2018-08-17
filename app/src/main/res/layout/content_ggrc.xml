@@ -7,7 +7,8 @@
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".GGRC"
-    tools:showIn="@layout/activity_ggrc">
+    tools:showIn="@layout/activity_ggrc"
+    android:animateLayoutChanges="true">
 
     <TextView
         android:id="@+id/ggrc_header_txtView"
@@ -18,15 +19,14 @@
         android:text="@string/my_go_green_card"
         android:textAlignment="center"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="30sp"
-        android:typeface="normal" />
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/ggrc_user_txtView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_light"
-        android:text="Welcome!"
+        android:fontFamily="@font/roboto_regular"
+        android:text="&#9733; Welcome! &#9733;"
         android:textAlignment="center"
         android:textColor="@color/redAccent"
         android:textSize="24sp"
@@ -39,13 +39,24 @@
         android:checked="false"
         android:textOff="Show GGRC Information"
         android:textOn="Hide GGRC Information"
-        android:background="@color/lightestGreen" />
+        android:background="@color/com_facebook_messenger_blue"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:onClick="onToggleClicked"
+        android:layout_marginTop="8dp"
+        android:elevation="@dimen/cardview_default_elevation"
+        android:shadowRadius="@dimen/cardview_default_radius" />
 
     <LinearLayout
+        android:id="@+id/greenActionsList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:visibility="invisible">
+        android:isScrollContainer="true"
+        android:scrollbarStyle="outsideInset"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:background="@color/lightestGreen">
 
         <TextView
             android:layout_width="match_parent"
@@ -55,8 +66,22 @@
             android:paddingTop="5dp"
             android:text="@string/ggrc_actions_you_can_take"
             android:textAlignment="center"
-            android:textColor="@color/royalBlue"
-            android:textSize="18sp" />
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:background="@color/darkGreen"
+            android:maxLines="1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:paddingBottom="10dp"
+            android:paddingTop="5dp"
+            android:text="@string/ten_pts_info"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:background="@color/darkGreen" />
 
         <TextView
             android:id="@+id/textView"
@@ -65,7 +90,7 @@
             android:paddingEnd="10dp"
             android:paddingStart="20dp"
             android:text="@string/ggrc_list_actions"
-            android:textSize="16sp" />
+            android:textSize="20sp" />
 
     </LinearLayout>
 

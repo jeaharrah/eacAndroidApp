@@ -328,7 +328,12 @@
     <!--<string name="default_web_client_id">603018144921-g3l8n0qcrl6vt1ev15pf7eekncludcpe.apps.googleusercontent.com</string>-->
 
     <string name="ggrc_actions_you_can_take">
-        Green Actions You Can Take to Earn 10 Points
+        <u>Green Actions You Can Take to Earn Points</u>
+    </string>
+
+    <string name="ten_pts_info">
+        &#9733;&#9733;&#9733;&#9733;&#9733;&#9733;&#9733;&#9733;&#9733;&#9733;\n
+        10 points gives you a free gift\nor discount to a local business!!!
     </string>
 
     <string name="ggrc_list_actions">

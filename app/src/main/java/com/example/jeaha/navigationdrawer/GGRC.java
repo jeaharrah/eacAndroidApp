@@ -7,7 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 import com.google.firebase.auth.FirebaseUser;
 
@@ -22,6 +24,8 @@ public class GGRC extends AppCompatActivity {
     private String fbName;
     private String googleEmail;
     private String email;
+
+    LinearLayout greenActionsLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +45,22 @@ public class GGRC extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         TextView userTxtView = findViewById(R.id.ggrc_user_txtView);
+
+        /*final ToggleButton toggleButton = findViewById(R.id.toggleButton);
+        final LinearLayout greenActionsLayout = findViewById(R.id.greenActionsList);
+
+        final boolean checkedState = toggleButton.isChecked();
+
+        toggleButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (checkedState) {
+                    greenActionsLayout.setVisibility(View.VISIBLE);
+                } else {
+                    greenActionsLayout.setVisibility(View.GONE);
+                }
+            }
+        });*/
 
         /*try {
             fbName = fbInstance.user.getDisplayName();
@@ -93,4 +113,15 @@ public class GGRC extends AppCompatActivity {
 
     }
 
+    public void onToggleClicked(View view) {
+        greenActionsLayout = findViewById(R.id.greenActionsList);
+        //greenActionsLayout.setScrollContainer(true);
+
+        if (((ToggleButton) view).isChecked()) {
+            greenActionsLayout.setVisibility(View.VISIBLE);
+        } else {
+            greenActionsLayout.setVisibility(View.GONE);
+        }
+
+    }
 }

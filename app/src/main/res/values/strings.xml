@@ -60,14 +60,14 @@
         <b>"Welcome to the Abington Township Environmental Advisory Council (EAC) and Shade Tree"
             "Commission (STC) mobile app!\n\n"</b>
         "The EAC and STC work together to provide a clean and healthy environment for residents in"
-        "our community through various programs outlined in this app.\n\n"
+        " our community through various programs outlined in this app.\n\n"
         "Public meetings are usually held the second Wednesday of the month at 7:30 pm at the"
-        "township building.\n\n"
+        " township building.\n\n"
 
         "The meetings are open to the public and we welcome your comments and suggestions."
 
         <!--To ensure that the bottom-most lines of text are visible in the TextView-->
-        "\n\n"
+        "\n"
 
     </string>
 

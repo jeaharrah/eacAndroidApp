@@ -81,39 +81,51 @@ public class BaseActivity extends AppCompatActivity {
                 case 0:
                     Intent intent = new Intent(getBaseContext(), TabbedAbout.class);
                     startActivity(intent);
+                    finish();
+                    break;
 
-                    //nav_ggrc
+                //nav_ggrc
                 case 1:
                     Intent intent1 = new Intent(getBaseContext(), GGRC.class);
                     startActivity(intent1);
+                    finish();
+                    break;
 
-                    //nav_programs
+                //nav_programs
                 case 2:
                     Intent intent2 = new Intent(getBaseContext(), Calendar.class);
                     startActivity(intent2);
+                    finish();
+                    break;
 
-                    //nav_contact
+                //nav_contact
                 case 3:
                     Intent intent3 = new Intent(getBaseContext(), Contact.class);
                     startActivity(intent3);
+                    finish();
+                    break;
 
-                    //nav_gallery
+                //nav_gallery
                 case 4:
                     Intent intent4 = new Intent(getBaseContext(), PhotoGallery.class);
                     startActivity(intent4);
+                    finish();
+                    break;
 
-                    //nav_like_us_on_fb
+                //nav_like_us_on_fb
                 case 5:
                     Intent intent5 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www" +
                             ".facebook.com/Abington.EAC/"));
                     startActivity(intent5);
+                    finish();
+                    break;
 
-                    //nav_chooser_signin
+                //nav_chooser_signin
                 case 6:
                     Intent intent6 = new Intent(getBaseContext(), ChooserActivity.class);
                     startActivity(intent6);
-
-
+                    finish();
+                    break;
             }
 
         }

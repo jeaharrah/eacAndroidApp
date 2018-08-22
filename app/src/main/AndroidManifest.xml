@@ -13,6 +13,7 @@
         android:roundIcon="@mipmap/launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
@@ -23,6 +24,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".About"
             android:label="@string/title_activity_about"
@@ -32,6 +34,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.jeaha.navigationdrawer.MainActivity" />
         </activity>
+
         <activity
             android:name=".Calendar"
             android:label="@string/title_activity_calendar"
@@ -41,6 +44,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.jeaha.navigationdrawer.MainActivity" />
         </activity>
+
         <activity
             android:name=".Contact"
             android:label="@string/title_activity_contact"
@@ -50,6 +54,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.jeaha.navigationdrawer.MainActivity" />
         </activity>
+
         <activity
             android:name=".PhotoGallery"
             android:label="@string/title_activity_photo_gallery"
@@ -59,6 +64,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.jeaha.navigationdrawer.MainActivity" />
         </activity>
+
         <activity
             android:name=".TabbedAbout"
             android:label="@string/about_abington_committees"
@@ -68,6 +74,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.jeaha.navigationdrawer.MainActivity" />
         </activity>
+
         <activity
             android:name=".ChooserActivity"
             android:label="@string/sign_in"
@@ -77,6 +84,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.jeaha.navigationdrawer.MainActivity" />
         </activity>
+
         <activity
             android:name=".GoogleSignInActivity"
             android:label="@string/title_activity_volunteer_sign_in_google"
@@ -86,6 +94,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.jeaha.navigationdrawer.ChooserActivity" />
         </activity>
+
         <activity
             android:name=".FacebookLoginActivity"
             android:label="@string/title_activity_volunteer_sign_in_facebook"
@@ -95,6 +104,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.jeaha.navigationdrawer.ChooserActivity" />
         </activity>
+
         <activity
             android:name=".EmailPasswordActivity"
             android:label="@string/email_sign_in"
@@ -104,6 +114,12 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.jeaha.navigationdrawer.ChooserActivity" />
         </activity>
+
+        <activity
+            android:name=".BaseActivity"
+            android:label="@string/title_activity_base_activity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
         <activity
             android:name=".Welcome"
             android:label="@string/title_activity_welcome"
@@ -131,6 +147,7 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".GGRC"
             android:label="@string/title_activity_ggrc"

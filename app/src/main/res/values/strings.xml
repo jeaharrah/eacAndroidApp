@@ -224,6 +224,7 @@
     <string name="title_activity_volunteer_sign_in_facebook">Sign In via Facebook</string>
     <string name="eac">EAC</string>
     <string name="title_activity_firebase_signin">Sign In</string>
+    <string name="title_activity_base_activity">Base Activity</string>
     <string name="firebase_web_host" translatable="false">abingtoneacandroid.firebaseapp.com</string>
 
 

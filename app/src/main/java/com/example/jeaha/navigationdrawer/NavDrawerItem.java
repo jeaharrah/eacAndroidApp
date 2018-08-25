@@ -6,14 +6,6 @@ public class NavDrawerItem {
     private String title;
     private String caption;
 
-    public NavDrawerItem() {
-
-    }
-
-    public NavDrawerItem(String title) {
-        this.title = title;
-    }
-
     public NavDrawerItem(String title, String caption) {
         this.title = title;
         this.caption = caption;

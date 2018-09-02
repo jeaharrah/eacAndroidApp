@@ -202,12 +202,21 @@ public class BaseActivity extends AppCompatActivity { //changed from deprecated 
                 startActivity(intent6);
                 finish();
                 break;
+            default:
+                break;
         }
 
 
         // update selected item and title, then close the drawer
+       /* for (int i = 0; i <= mDrawerList.getAdapter().getCount(); i++) {
+            if (position == i) {*/
         mDrawerList.setItemChecked(position, true);
         mDrawerList.setSelection(position);
+//            } else {
+        mDrawerLayout.openDrawer(mDrawerList, true);
+        //}
+        //}
+
         mDrawerLayout.closeDrawer(mDrawerList);
     }
 

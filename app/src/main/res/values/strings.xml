@@ -363,6 +363,18 @@
 
     </string-array>
 
+    <string-array name="nav_drawer_captions">
+        <item>Find out more about the EAC and its affiliate, the STC.</item>
+        <item>Track and log credits on your GoGreen Rewards Card.</item>
+        <item>See what programs are coming up for the EAC.</item>
+        <item>Learn how you can get in touch with us.</item>
+        <item>View images of past EAC events.</item>
+        <item>Log in via Google, Facebook, or a generic email address to log more GGRC
+            points!</item>
+        <item>Search for us @Abington.EAC</item>
+
+    </string-array>
+
     <array name="nav_drawer_icons">
         <item>@drawable/menu_about</item>
         <item>@drawable/menu_ggrc</item>
@@ -372,5 +384,6 @@
         <item>@drawable/ic_person_24dp</item>
         <item>@drawable/ic_facebook_outline_24dp</item>
     </array>
+    <string name="title_activity_home">HomeActivity</string>
 
 </resources>

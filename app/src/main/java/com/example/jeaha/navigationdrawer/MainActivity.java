@@ -145,6 +145,9 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_chooser_signin) {
             intent = new Intent(MainActivity.this, ChooserActivity.class);
             startActivity(intent);
+        } else if (id == R.id.nav_home) {
+            intent = new Intent(MainActivity.this, HomeActivity.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

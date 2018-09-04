@@ -1,4 +1,4 @@
-<resources xmlns:android="http://schemas.android.com/apk/res/android">
+<resources>
     <item name="menu_about" type="drawable">@drawable/ic_info_black_24dp</item>
     <item name="menu_calendar" type="drawable">@drawable/ic_calendar_clock_24dp</item>
     <item name="menu_contact" type="drawable">@drawable/ic_email_24dp</item>

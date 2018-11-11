@@ -147,7 +147,16 @@
         <activity
             android:name=".HomeActivity"
             android:label="@string/title_activity_home"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ViewPager"
+            android:label="@string/title_activity_view_pager"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.jeaha.navigationdrawer.MainActivity" />
+        </activity>
     </application>
 
 </manifest> <!-- android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" -->

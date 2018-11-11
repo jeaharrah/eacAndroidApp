@@ -385,5 +385,6 @@
         <item>@drawable/ic_facebook_outline_24dp</item>
     </array>
     <string name="title_activity_home">HomeActivity</string>
+    <string name="title_activity_view_pager">ViewPager</string>
 
 </resources>

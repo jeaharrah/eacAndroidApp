@@ -31,5 +31,8 @@
     <color name="tab_background_selected">@color/mediumGreen</color>
     <color name="tab_background_unselected">@color/darkGreen</color>
 
+    <color name="fui_buttonShadow">#64BEBEBE</color>
+
+
 </resources>
 

@@ -12,15 +12,6 @@ import android.widget.ToggleButton;
 
 public class GGRC extends AppCompatActivity {
 
-    private FacebookLoginActivity fbInstance = new FacebookLoginActivity();
-    private GoogleSignInActivity googleInstance = new GoogleSignInActivity();
-    private EmailPasswordActivity emailInstance = new EmailPasswordActivity();
-    private String name;
-
-    private String fbName;
-    private String googleEmail;
-    private String email;
-
     LinearLayout greenActionsLayout;
 
     @Override

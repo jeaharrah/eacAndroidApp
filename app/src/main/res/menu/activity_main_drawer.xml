@@ -38,22 +38,6 @@
 
     <group
         android:checkableBehavior="single"
-        android:menuCategory="secondary"
-        android:id="@+id/sign_in_group">
-        <item
-            android:id="@+id/sign_in_header"
-            android:title="@string/log_in">
-            <menu>
-                <item
-                    android:id="@+id/nav_chooser_signin"
-                    android:icon="@drawable/ic_person_24dp"
-                    android:title="@string/sign_in" />
-            </menu>
-        </item>
-    </group>
-
-    <group
-        android:checkableBehavior="single"
         android:id="@+id/social_media_group"
         android:menuCategory="secondary">
         <item

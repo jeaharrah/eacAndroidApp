@@ -142,11 +142,8 @@ public class MainActivity extends AppCompatActivity
             intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/Abington" +
                     ".EAC/"));
             startActivity(intent);
-        } else if (id == R.id.nav_chooser_signin) {
-            intent = new Intent(MainActivity.this, ChooserActivity.class);
-            startActivity(intent);
         } else if (id == R.id.nav_home) {
-            intent = new Intent(MainActivity.this, HomeActivity.class);
+            intent = new Intent(MainActivity.this, MainActivity.class);
             startActivity(intent);
         }
 

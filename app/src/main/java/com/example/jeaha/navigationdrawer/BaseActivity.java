@@ -196,12 +196,6 @@ public class BaseActivity extends AppCompatActivity { //changed from deprecated 
                 finish();
                 break;
 
-            //nav_chooser_signin
-            case 6:
-                Intent intent6 = new Intent(getBaseContext(), ChooserActivity.class);
-                startActivity(intent6);
-                finish();
-                break;
             default:
                 break;
         }

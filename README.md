@@ -1,10 +1,10 @@
 # Abington EAC App
 
 ## Mobile app for the Environmental Advisory Council of Abington. For Android OS.
+Earliest Android phone device supported: v. 6.0 (Marshmallow)/API 23
 
-#### This will--ideally--allow volunteers to accumulate points on their Go Green Rewards Card (GGRC) when signed into their Google account.
-
-### Additional features will include:
+### This app provides information about the Abington EAC.
+### Features include:
 
 • An About page
 
@@ -12,7 +12,7 @@
 
 • A calendar of upcoming EAC events (e.g. volunteer opportunities, educational workshops, committee meetings)
 
-• A photo gallery containing some photos from EAC events in the past
+• A photo gallery containing some photos from past EAC events
 
 • A list of actions that a volunteer can perform to earn points on the GGRC
 

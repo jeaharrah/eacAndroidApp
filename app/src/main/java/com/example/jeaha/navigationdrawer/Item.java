@@ -1,9 +1,10 @@
 package com.example.jeaha.navigationdrawer;
 
 public class Item {
-    private String title, shortDesc, location, time, month, date, weekDay;
+    private String title, shortDesc, location, time, month, date, weekDay, year;
 
-    public Item(String title, String shortDesc, String location, String time, String month, String date, String weekDay) {
+    public Item(String title, String shortDesc, String location, String time, String month,
+                String date, String weekDay, String year) {
         this.title = title;
         this.shortDesc = shortDesc;
         this.location = location;
@@ -11,6 +12,7 @@ public class Item {
         this.month = month;
         this.date = date;
         this.weekDay = weekDay;
+        this.year = year;
     }
 
     public String getTitle() {
@@ -21,7 +23,7 @@ public class Item {
         this.title = title;
     }
 
-    public String getShortDesc() {
+    String getShortDesc() {
         return shortDesc;
     }
 
@@ -29,7 +31,7 @@ public class Item {
         this.shortDesc = shortDesc;
     }
 
-    public String getLocation() {
+    String getLocation() {
         return location;
     }
 
@@ -45,7 +47,7 @@ public class Item {
         this.time = time;
     }
 
-    public String getMonth() {
+    String getMonth() {
         return month;
     }
 
@@ -69,5 +71,10 @@ public class Item {
         this.weekDay = weekDay;
     }
 
+    public String getYear() { return year; }
+
+    public void setYear(String year) {
+        this.year = year;
+    }
 
 }

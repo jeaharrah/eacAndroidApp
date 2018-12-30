@@ -42,7 +42,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
         holder.textViewTime.setText(String.valueOf(item.getTime()));
         holder.textViewMonth.setText(String.valueOf(item.getMonth()));
         holder.textViewDate.setText(String.valueOf(item.getDate()));
-        
+        holder.textViewYear.setText(String.valueOf(item.getYear()));
 
     }
 
@@ -54,7 +54,8 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
     class ItemViewHolder extends RecyclerView.ViewHolder {
 
         TextView positionGuide;
-        TextView textViewTitle, textViewDesc, textViewLocation, textViewTime, textViewMonth, textViewDate, textViewWeekday;
+        TextView textViewTitle, textViewDesc, textViewLocation, textViewTime, textViewMonth,
+        textViewDate, textViewWeekday, textViewYear;
 
 
         public ItemViewHolder(View itemView) {
@@ -68,7 +69,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
             textViewMonth = itemView.findViewById(R.id.textViewMonth);
             textViewDate = itemView.findViewById(R.id.textViewBigDateNum);
             textViewWeekday = itemView.findViewById(R.id.textViewWeekday);
-
+            textViewYear = itemView.findViewById(R.id.textViewYear);
 
         }
     }

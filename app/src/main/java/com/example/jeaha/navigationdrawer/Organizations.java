@@ -41,6 +41,7 @@ public class Organizations extends AppCompatActivity {
     String date = "";
     String weekday = "";
     String time = "";
+    String year = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -126,8 +127,10 @@ public class Organizations extends AppCompatActivity {
             month = e.getString("month");
             date = e.getString("date");
             weekday = e.getString("weekday");
+            year = e.getString("year");
 
-            Item item = new Item(title, shortDescription, location, time, month, date, weekday);
+            Item item = new Item(title, shortDescription, location, time, month, date, weekday,
+                    year);
             bizList.add(item);
 
         }

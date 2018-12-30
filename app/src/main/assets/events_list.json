@@ -7,7 +7,8 @@
     "month": "Jan",
       "date": "15",
       "weekday": "Tuesday",
-    "time": "8-10 a.m."
+    "time": "8-10 a.m.",
+      "year": "2019"
     },
 
     {
@@ -17,7 +18,8 @@
       "month": "June",
       "date": "30",
       "weekday": "Saturday",
-      "time": "11 a.m."
+      "time": "11 a.m.",
+      "year": "2019"
     },
     {
       "title": "Abington EAC Committee Meeting",
@@ -26,7 +28,8 @@
       "month": "July",
       "date": "11",
       "weekday": "Tuesday",
-      "time": "7:30 p.m."
+      "time": "7:30 p.m.",
+      "year": "2019"
     },
     {
       "title": "Tree Planting Workshop",
@@ -35,7 +38,8 @@
       "month": "July",
       "date": "21",
       "weekday": "Saturday",
-      "time": "10 a.m."
+      "time": "10 a.m.",
+      "year": "2019"
     }
   ]
 }
